@@ -8,13 +8,13 @@ import Menu from '@mui/material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
-import { MenuIcon } from '../../../assets'
+import { MenuIcon } from 'assets'
+import { theme } from 'common'
 
 const pages = ['Products', 'Pricing', 'Blog']
 
 export const AppBarComponent = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null|HTMLElement>(null)
-
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget)
   }
@@ -69,7 +69,7 @@ export const AppBarComponent = () => {
                 key={page}
                 size='large'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 1, color: '#f68947', display: 'block' }}
+                sx={{ my: 1, color: theme.color, display: 'block' }}
               >
                 {page}
               </Button>
