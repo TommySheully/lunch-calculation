@@ -103,7 +103,7 @@ export const ingredients = [
     { ingredient: 'сливки 10%', measurement: 'л' },
     { ingredient: 'сливки 33%', measurement: 'л' },
     { ingredient: 'сливочное масло 82%', measurement: 'кг' },
-    { ingredient: 'сметана 26%', measurement: 'кг' },
+    { ingredient: 'сметана 26%', measurement: 'л' },
     { ingredient: 'сухое молоко', measurement: 'кг' },
     { ingredient: 'сыр желтый', measurement: 'кг' },
     { ingredient: 'сыр камамбер', measurement: 'кг' },
@@ -134,10 +134,9 @@ export const ingredients = [
     { ingredient: 'ванилин', measurement: 'гр' },
     { ingredient: 'горчица черная', measurement: 'гр' },
     { ingredient: 'гроздика молотая', measurement: 'гр' },
-    { ingredient: 'гвоздика молотая', measurement: 'гр' },
     { ingredient: 'имбирь молотый', measurement: 'гр' },
     { ingredient: 'кардамон', measurement: 'гр' },
-    { ingredient: 'карри молотая', measurement: 'гр' },
+    { ingredient: 'карри молотый', measurement: 'гр' },
     { ingredient: 'кориандр молотый', measurement: 'гр' },
     { ingredient: 'корица молотая', measurement: 'гр' },
     { ingredient: 'кумин молотый', measurement: 'гр' },
@@ -162,3 +161,31 @@ export const ingredients = [
     { ingredient: 'тмин', measurement: 'гр' }
   ]],
 ]
+
+export const recipes = [
+  ['рис', 100, [
+    { ingredient: 'рис басмати', measurement: 'кг', value: 7.2 },
+    { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.8 },
+    { ingredient: 'вода', measurement: 'л', value: 16.7 },
+    { ingredient: 'соль', measurement: 'гр', value: 184 },
+    { ingredient: 'итог', measurement: 'кг', value: 21.7 },
+  ]],
+  ['сабджи из картошки и цветной капусты', 100, [
+    { ingredient: 'картошка', measurement: 'кг', value: 20 },
+    { ingredient: 'морковка', measurement: 'кг', value: 10 },
+    { ingredient: 'цветная капуста', measurement: 'кг', value: 20 },
+    { ingredient: 'адыгейский сыр', measurement: 'кг', value: 5 },
+    { ingredient: 'томатная паста', measurement: 'кг', value: 2 },
+    { ingredient: 'сахар', measurement: 'кг', value: 1 },
+    { ingredient: 'укроп', measurement: 'гр', value: 100 },
+    { ingredient: 'сметана 26%', measurement: 'л', value: 2.5 },
+    { ingredient: 'масло подсолнечное', measurement: 'л', value: 2 },
+    { ingredient: 'асафетида', measurement: 'гр', value: 50 },
+    { ingredient: 'черный перец молотый', measurement: 'гр', value: 30 },
+    { ingredient: 'кориандр молотый', measurement: 'гр', value: 30 },
+    { ingredient: 'карри молотый', measurement: 'гр', value: 40 },
+
+    { ingredient: 'итог', measurement: 'кг', value: 42.5 },
+  ]]
+]
+
