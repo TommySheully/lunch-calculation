@@ -1,5 +1,7 @@
-import { AppBarComponent } from '../common/components/appBar/AppBar'
 import React from 'react'
+import { AppBarComponent } from 'common'
+
+
 
 
 function App() {

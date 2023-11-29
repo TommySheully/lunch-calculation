@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem'
 import { MenuIcon } from 'assets'
 import { theme } from 'common'
 
-const pages = ['Products', 'Pricing', 'Blog']
+const pages = ['Menu', 'Pricing', 'Blog']
 
 export const AppBarComponent = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null|HTMLElement>(null)
