@@ -22,7 +22,8 @@
     "baseUrl": "src",
     "paths": {
       "assets": ["assets"],
-      "common": ["common"]
+      "common": ["common"],
+      "app": ["app"]
     }
   },
   "include": ["src"]

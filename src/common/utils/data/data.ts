@@ -1,5 +1,7 @@
-export const ingredients = [
-  ['fruits', [
+import { IngredientsType, receiptsType } from '../types/type'
+
+export const ingredients: IngredientsType = {
+  fruits: [
     { ingredient: 'абрикос', measurement: 'кг' },
     { ingredient: 'ананас', measurement: 'кг' },
     { ingredient: 'апельсин', measurement: 'кг' },
@@ -21,7 +23,8 @@ export const ingredients = [
     { ingredient: 'хурма', measurement: 'кг' },
     { ingredient: 'ключква', measurement: 'кг' },
     { ingredient: 'облипиха', measurement: 'кг' }
-  ]], ['grocery', [
+  ],
+  grocery: [
     { ingredient: 'булгур', measurement: 'кг' },
     { ingredient: 'горох сухой', measurement: 'кг' },
     { ingredient: 'гречневая крупа', measurement: 'кг' },
@@ -47,11 +50,11 @@ export const ingredients = [
     { ingredient: 'сода', measurement: 'гр' },
     { ingredient: 'соль', measurement: 'гр' },
     { ingredient: 'томатная паста', measurement: 'кг' },
-    { ingredient: 'чечивица зеленая', measurement: 'кг' },
-    { ingredient: 'чечивица красная', measurement: 'кг' },
+    { ingredient: 'чечевица зеленая', measurement: 'кг' },
+    { ingredient: 'чечевица красная', measurement: 'кг' },
     { ingredient: 'вода', measurement: 'л' }
-  ]],
-  ['vegetables', [
+  ],
+  vegetables: [
     { ingredient: 'авокадо', measurement: 'кг' },
     { ingredient: 'айсберг', measurement: 'кг' },
     { ingredient: 'баклажан', measurement: 'кг' },
@@ -87,14 +90,16 @@ export const ingredients = [
     { ingredient: 'цветная капуста', measurement: 'кг' },
     { ingredient: 'цуккини', measurement: 'кг' },
     { ingredient: 'имбирь', measurement: 'кг' }
-  ]], ['juices', [
+  ],
+  juices: [
     { ingredient: 'сок апельсиновый', measurement: 'л' },
     { ingredient: 'сок гранатовый', measurement: 'л' },
     { ingredient: 'сок лимонный', measurement: 'л' },
     { ingredient: 'сок манговый', measurement: 'л' },
     { ingredient: 'сок вишневый', measurement: 'л' },
     { ingredient: 'сок виноградный (красный)', measurement: 'л' }
-  ]], ['milks', [
+  ],
+  milks: [
     { ingredient: 'адыгейский сыр', measurement: 'кг' },
     { ingredient: 'кефир', measurement: 'л' },
     { ingredient: 'майонез постный', measurement: 'кг' },
@@ -110,11 +115,12 @@ export const ingredients = [
     { ingredient: 'сухое молоко', measurement: 'кг' },
     { ingredient: 'сыр желтый', measurement: 'кг' },
     { ingredient: 'сыр камамбер', measurement: 'кг' },
-    { ingredient: 'сыр моцарелла ', measurement: 'кг' },
+    { ingredient: 'сыр моцарелла', measurement: 'кг' },
     { ingredient: 'сыр сулугуни', measurement: 'кг' },
     { ingredient: 'сыр чечил/джил', measurement: 'кг' },
     { ingredient: 'творог 9%', measurement: 'кг' }
-  ]], ['nuts', [
+  ],
+  nuts: [
     { ingredient: 'арахис', measurement: 'кг' },
     { ingredient: 'грецкий орех', measurement: 'кг' },
     { ingredient: 'кешью', measurement: 'кг' },
@@ -126,14 +132,15 @@ export const ingredients = [
     { ingredient: 'семечки подсолнечника', measurement: 'кг' },
     { ingredient: 'семечки тыквы', measurement: 'кг' },
     { ingredient: 'фундук', measurement: 'кг' }
-  ]], ['driedFruits', [
+  ],
+  driedFruits: [
     { ingredient: 'инжир', measurement: 'кг' },
     { ingredient: 'изюм', measurement: 'кг' },
     { ingredient: 'курага', measurement: 'кг' },
     { ingredient: 'финики', measurement: 'кг' },
     { ingredient: 'цукаты', measurement: 'кг' }
-  ]],
-  ['spices', [
+  ],
+  spices: [
     { ingredient: 'анис', measurement: 'гр' },
     { ingredient: 'асафетида', measurement: 'гр' },
     { ingredient: 'базилик сухой', measurement: 'гр' },
@@ -174,10 +181,10 @@ export const ingredients = [
     { ingredient: 'хмели сунели', measurement: 'гр' },
     { ingredient: 'укроп', measurement: 'гр' },
     { ingredient: 'тмин', measurement: 'гр' }
-  ]]
-]
+  ]
+}
 
-export const recipes = [
+export const recipes: receiptsType[] = [
   ['рис', 100, [
     { ingredient: 'рис басмати', measurement: 'кг', value: 7.2 },
     { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.8 },
@@ -276,18 +283,18 @@ export const recipes = [
     { ingredient: 'манная крупа', measurement: 'кг', value: 2.29 },
     { ingredient: 'сахар', measurement: 'кг', value: 1.33 },
     { ingredient: 'грецкий орех', measurement: 'кг', value: 0.83 },
-    { ingredient: 'яблоки', measurement: 'кг', value: 5.73 },
+    { ingredient: 'яблоко', measurement: 'кг', value: 5.73 },
     { ingredient: 'масло подсолнечное', measurement: 'л', value: 1.15 },
     { ingredient: 'кефир', measurement: 'л', value: 3.82 },
     { ingredient: 'лимонная кислота', measurement: 'гр', value: 114.7 },
     { ingredient: 'сода', measurement: 'гр', value: 114.7 },
     { ingredient: 'ванилин', measurement: 'гр', value: 12.5 },
-    { ingredient: 'выход противней (8х5 нарезка)', measurement: 'шт', value: 2.54 }
+    { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54 }
   ]],
   ['бурфи с семечками подсолнуха', 100, [
     { ingredient: 'сухое молоко', measurement: 'кг', value: 1.867 },
     { ingredient: 'сахар', measurement: 'кг', value: 0.94 },
-    { ingredient: 'семечки подсолнуха', measurement: 'кг', value: 0.64 },
+    { ingredient: 'семечки подсолнечника', measurement: 'кг', value: 0.64 },
     { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84 },
     { ingredient: 'сметана 26%', measurement: 'л', value: 1.12 },
     { ingredient: 'ванилин', measurement: 'гр', value: 6.5 },
@@ -367,7 +374,7 @@ export const recipes = [
     { ingredient: 'изюм', measurement: 'кг', value: 0.5 },
     { ingredient: 'фундук', measurement: 'кг', value: 0.5 },
     { ingredient: 'вода', measurement: 'л', value: 10 },
-    { ingredient: 'бананы', measurement: 'кг', value: 5.9 },
+    { ingredient: 'банан', measurement: 'кг', value: 5.9 },
     { ingredient: 'ванилин', measurement: 'гр', value: 5 },
     { ingredient: 'итог', measurement: 'кг', value: 25 }
   ]],
@@ -575,7 +582,7 @@ export const recipes = [
   ['салат свежий', 100, [
     { ingredient: 'томаты', measurement: 'кг', value: 6.7 },
     { ingredient: 'огурцы', measurement: 'кг', value: 6.7 },
-    { ingredient: 'пекинская капуста', measurement: 'кг', value: 10 },
+    { ingredient: 'пекинская капуста', measurement: 'кг', value: 10 }
   ]],
   ['соус ореховый', 100, [
     { ingredient: 'арахис', measurement: 'кг', value: 1.9 },
@@ -589,7 +596,7 @@ export const recipes = [
     { ingredient: 'асафетида', measurement: 'гр', value: 20 },
     { ingredient: 'гуаровая камедь', measurement: 'гр', value: 10 },
     { ingredient: 'сахар', measurement: 'кг', value: 0.246 },
-    { ingredient: 'сок лимонный', measurement: 'л', value: 0.328 },
+    { ingredient: 'сок лимонный', measurement: 'л', value: 0.328 }
   ]],
   ['соус ореховый экадашный', 100, [
     { ingredient: 'арахис', measurement: 'кг', value: 1.9 },
@@ -600,7 +607,7 @@ export const recipes = [
     { ingredient: 'мускатный орех', measurement: 'гр', value: 20 },
     { ingredient: 'гуаровая камедь', measurement: 'гр', value: 10 },
     { ingredient: 'сахар', measurement: 'кг', value: 0.246 },
-    { ingredient: 'сок лимонный', measurement: 'л', value: 0.328 },
+    { ingredient: 'сок лимонный', measurement: 'л', value: 0.328 }
   ]],
   ['гауранга экадашная', 100, [
     { ingredient: 'картошка', measurement: 'кг', value: 30 },
@@ -615,7 +622,7 @@ export const recipes = [
     { ingredient: 'куркума молотая', measurement: 'гр', value: 10 },
     { ingredient: 'черный перец молотый', measurement: 'гр', value: 45 },
     { ingredient: 'паприка копченая молотая', measurement: 'гр', value: 10 },
-    { ingredient: 'соль', measurement: 'гр', value: 310 },
+    { ingredient: 'соль', measurement: 'гр', value: 310 }
   ]],
   ['оливье', 100, [
     { ingredient: 'картошка', measurement: 'кг', value: 5.6 },
@@ -624,8 +631,8 @@ export const recipes = [
     { ingredient: 'сыр чечил/джил', measurement: 'гр', value: 0.37 },
     { ingredient: 'огурцы маринованные', measurement: 'кг', value: 2.2 },
     { ingredient: 'укроп свежий', measurement: 'кг', value: 0.15 },
-    { ingredient: 'петрушка свежий', measurement: 'кг', value: 0.15 },
-    { ingredient: 'майонез постны', measurement: 'кг', value: 4 },
+    { ingredient: 'петрушка свежая', measurement: 'кг', value: 0.15 },
+    { ingredient: 'майонез постный', measurement: 'кг', value: 4 },
     { ingredient: 'черная соль', measurement: 'гр', value: 60 },
     { ingredient: 'асафетида', measurement: 'гр', value: 25 },
     { ingredient: 'черный перец молотый', measurement: 'гр', value: 5 },
