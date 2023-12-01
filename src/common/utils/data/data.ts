@@ -185,7 +185,7 @@ export const ingredients: IngredientsType = {
 }
 
 export const recipes: receiptsType[] = [
-  ['рис', 100, [
+  ['рис басмати', 100, [
     { ingredient: 'рис басмати', measurement: 'кг', value: 7.2 },
     { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.8 },
     { ingredient: 'вода', measurement: 'л', value: 16.7 },
@@ -378,7 +378,7 @@ export const recipes: receiptsType[] = [
     { ingredient: 'ванилин', measurement: 'гр', value: 5 },
     { ingredient: 'итог', measurement: 'кг', value: 25 }
   ]],
-  ['[пури]', 100, [
+  ['пури', 100, [
     { ingredient: 'мука 1й сорт', measurement: 'кг', value: 2 },
     { ingredient: 'мука грубого помола', measurement: 'кг', value: 1 },
     { ingredient: 'сахар', measurement: 'кг', value: 7.1 },
@@ -390,7 +390,7 @@ export const recipes: receiptsType[] = [
     { ingredient: 'куркума молотая', measurement: 'гр', value: 15 },
     { ingredient: 'масло подсолнечное', measurement: 'кг', value: 3 }
   ], 'Смешать все сухие компоненты. Добавить воду. Замесить тесто и дать настояться минут 15. После этого, отрезать от теста небольшие кусочки (~ 50 гр.), и раскатать из них красивые круглые лепешки, толщиной 2-3 мм. Жарить пури во фритюре 1-2 минуты (для партии). При этом они должны надуваться как мячики. Пури готовы, когда при обжаривании становятся золотистыми.'],
-  ['[ласси]', 100, [
+  ['ласси', 100, [
     { ingredient: 'ряженка 3,6%', measurement: 'л', value: 13 },
     { ingredient: 'вода', measurement: 'л', value: 2 },
     { ingredient: 'сахар', measurement: 'кг', value: 2.1 },
@@ -399,7 +399,7 @@ export const recipes: receiptsType[] = [
     { ingredient: 'ванилин', measurement: 'гр', value: 10 },
     { ingredient: 'итог', measurement: 'л', value: 22 }
   ]],
-  ['[сочники]', 100, [
+  ['сочники', 100, [
     { ingredient: 'творог 9%', measurement: 'л', value: 5.9 },
     { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 2 },
     { ingredient: 'мука высший сорт', measurement: 'кг', value: 4 },
@@ -407,7 +407,7 @@ export const recipes: receiptsType[] = [
     { ingredient: 'сода', measurement: 'гр', value: 20 },
     { ingredient: 'сахар', measurement: 'кг', value: 2 }
   ]],
-  ['[алу шак]', 100, [
+  ['алу шак', 100, [
     { ingredient: 'шпинат замороженный', measurement: 'кг', value: 9.5 },
     { ingredient: 'картошка', measurement: 'кг', value: 12 },
     { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.3 },
@@ -421,7 +421,7 @@ export const recipes: receiptsType[] = [
     { ingredient: 'черная соль', measurement: 'гр', value: 100 },
     { ingredient: 'итог', measurement: 'л', value: 22 }
   ]],
-  ['[пакоры из цветной капусты]', 100, [
+  ['пакоры из цветной капусты', 100, [
     { ingredient: 'цветная капуста', measurement: 'кг', value: 12 },
     { ingredient: 'масло подсолнечное', measurement: 'кг', value: 3 },
     { ingredient: 'кляр' },
@@ -436,7 +436,7 @@ export const recipes: receiptsType[] = [
     { ingredient: 'соль', measurement: 'гр', value: 90 },
     { ingredient: 'сода', measurement: 'гр', value: 25 }
   ]],
-  ['[пудинг чиа (150 гр порция)]', 100, [
+  ['пудинг чиа (150 гр порция)', 100, [
     { ingredient: 'ряженка 3,6%', measurement: 'л', value: 14 },
     { ingredient: 'сахар', measurement: 'кг', value: 1.4 },
     { ingredient: 'овсяная крупа', measurement: 'кг', value: 0.67 },

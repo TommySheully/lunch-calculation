@@ -1,16 +1,12 @@
 import React from 'react'
-import { AppBarComponent } from 'common'
-import { RecipesComponent } from '../common/components/recepts/RecipesComponent'
-
-
-
+import { AppBarComponent, RecipesComponent } from 'common'
 
 function App() {
   return (
     <div>
       <AppBarComponent/>
-      <button>add rec</button>
       <RecipesComponent/>
+
     </div>
   )
 }

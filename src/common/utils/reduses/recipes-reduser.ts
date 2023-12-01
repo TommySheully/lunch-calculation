@@ -1,20 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { receiptsType } from '../types/type'
 
-const initialState: any = { value: 'adssaddas' }
+const initialState: receiptsType[] = []
 
 const slice = createSlice({
   name: 'recipes',
   initialState: initialState,
   reducers: {
-    /*    removeTaskAC(state, action: PayloadAction<{ taskId: string, todolistId: string }>) {
-          const tasks = state[action.payload.todolistId]
-          const index = tasks.findIndex(t => t.id === action.payload.taskId)
-          tasks.splice(index, 1)
-        },*/
-    addTaskAC(state, action: PayloadAction<{ task: any }>) {
-      const tasks = state[action.payload.task.todoListId]
-      tasks.unshift(action.payload.task)
+    addTaskAC(state, action: PayloadAction<{  recipe: receiptsType }>) {
+        state.unshift(action.payload.recipe)
     }
+
+    /*    removeTaskAC(state, action: PayloadAction<{ taskId: string, todolistId: string }>) {
+      const tasks = state[action.payload.todolistId]
+      const index = tasks.findIndex(t => t.id === action.payload.taskId)
+      tasks.splice(index, 1)
+    },*/
     /*    updateTaskAC(state, action: PayloadAction<{
           taskId: string,
           model: UpdateDomainTaskModelType,
