@@ -1,11 +1,11 @@
 import React from 'react'
-import { AppBarComponent, RecipesComponent } from 'common'
+import { AppBarComponent, MenuComponent } from 'common'
 
 function App() {
   return (
     <div>
       <AppBarComponent/>
-      <RecipesComponent/>
+      <MenuComponent/>
 
     </div>
   )
