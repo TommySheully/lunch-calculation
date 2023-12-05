@@ -6,8 +6,6 @@ import { RecipeComponent } from './RecipeComponent'
 export const MenuComponent = () => {
   const menu = useAppSelector(recipesSelector)
 
-  console.log(menu)
-
   return (
     <Component>
       {menu.map((el) => <RecipeComponent recipe={el} />)}
@@ -19,5 +17,5 @@ const Component = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: aquamarine;
+  background: #c4f5e4;
 `

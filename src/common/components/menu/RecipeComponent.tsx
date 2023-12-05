@@ -11,14 +11,14 @@ type PropsType = {
 export const RecipeComponent = ({ recipe }: PropsType) => {
 
   return (
-    <Paper sx={{ width: '50%', margin: '5px 0' }}>
+    <Paper sx={{ width: '60%', margin: '5px 0',  padding: '0 15px' }}>
       <HeaderComponent>
         <h2>{recipe[0]}</h2>
-        <h2>на {recipe[1]} чел</h2>
+        <h2>{recipe[1]} </h2>
       </HeaderComponent>
-      <IngrComponent>
+      <IngredientsContainer>
         {recipe[2].map((el) => <IngredientsComponents ingredient={el.ingredient} measurement={el.measurement} value={el.value}/>)}
-      </IngrComponent>
+      </IngredientsContainer>
     </Paper>
   )
 }
@@ -27,12 +27,11 @@ const HeaderComponent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
 `
 
-const IngrComponent = styled.div`
+const IngredientsContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 0 15px;
 `

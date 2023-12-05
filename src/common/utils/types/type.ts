@@ -2,7 +2,7 @@ export type receiptsType = [
   string,
   number,
   recipeType[],
-  string?
+  string?,
 ]
 
 export type recipeType = {

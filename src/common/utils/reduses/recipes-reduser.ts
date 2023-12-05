@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { receiptsType } from '../types/type'
+import { receiptsType } from 'common'
+
 
 const initialState: receiptsType[] = []
 
@@ -8,7 +9,7 @@ const slice = createSlice({
   initialState: initialState,
   reducers: {
     addTaskAC(state, action: PayloadAction<{  recipe: receiptsType }>) {
-        state.unshift(action.payload.recipe)
+        state.push(action.payload.recipe)
     }
 
     /*    removeTaskAC(state, action: PayloadAction<{ taskId: string, todolistId: string }>) {
