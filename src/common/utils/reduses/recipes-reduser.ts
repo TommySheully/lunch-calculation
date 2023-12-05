@@ -1,17 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { receiptsType } from 'common'
+import { receiptsType, RecipesReduserType } from 'common'
 
 
-const initialState: receiptsType[] = []
+const initialState: RecipesReduserType = { recipes: [], persons: 100 }
 
 const slice = createSlice({
   name: 'recipes',
   initialState: initialState,
   reducers: {
-    addTaskAC(state, action: PayloadAction<{  recipe: receiptsType }>) {
-        state.push(action.payload.recipe)
+    updatePersonsAC(state, action: PayloadAction<{ newValue: number }>) {
+      state.persons = action.payload.newValue
+    },
+    addTaskAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
+      state.recipes.push(action.payload.recipe)
+    },
+    updateRecipeAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
+      const index = state.recipes.findIndex(el => el.id === action.payload.recipe.id)
+      state.recipes[index] = action.payload.recipe
+    },
+    removeRecipeAC(state, action: PayloadAction<{ id: string }>) {
+      const index = state.recipes.findIndex(el => el.id === action.payload.id)
+      state.recipes.splice(index, 1)
     }
-
     /*    removeTaskAC(state, action: PayloadAction<{ taskId: string, todolistId: string }>) {
       const tasks = state[action.payload.todolistId]
       const index = tasks.findIndex(t => t.id === action.payload.taskId)
@@ -43,4 +53,4 @@ const slice = createSlice({
 })
 
 export const recipesReducer = slice.reducer
-export const { addTaskAC } = slice.actions
+export const { addTaskAC, updateRecipeAC, removeRecipeAC, updatePersonsAC } = slice.actions

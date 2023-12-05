@@ -1,14 +1,20 @@
 import React from 'react'
-import { recipesSelector, useAppSelector } from 'app'
+import { recipesSelector, useAppDispatch, useAppSelector } from 'app'
 import styled from 'styled-components'
-import { RecipeComponent } from './RecipeComponent'
+import { updatePersonsAC, Persons, RecipeComponent } from 'common'
 
 export const MenuComponent = () => {
-  const menu = useAppSelector(recipesSelector)
+  const {recipes, persons} = useAppSelector(recipesSelector)
+  const dispatch = useAppDispatch()
+
+  const updatePersonsHandler = (newValue: string) => {
+    dispatch(updatePersonsAC({ newValue: Number(newValue) }))
+  }
 
   return (
     <Component>
-      {menu.map((el) => <RecipeComponent recipe={el} />)}
+      <Persons changePersons={updatePersonsHandler} persons={persons}/>
+      {recipes.map((el) => <RecipeComponent key={el.id} recipe={el}/>)}
     </Component>
   )
 }

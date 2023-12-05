@@ -4,32 +4,32 @@ import Button from '@mui/material/Button'
 import { Paper } from '@mui/material'
 import { useAppDispatch } from 'app'
 import { addTaskAC, receiptsType, theme } from 'common'
+import { v4 } from 'uuid'
 
 
 type PropsType = {
-  header: string
-  ingredientList: string[]
   recipe: receiptsType
 }
 
-export const RecipeCompound = ({ header, ingredientList, recipe }: PropsType) => {
+export const DescriptionRecipe = ({ recipe }: PropsType) => {
+  const { title, ingredients } = recipe
 
   const dispatch = useAppDispatch()
-  const onHandler = () => {
-    dispatch(addTaskAC({ recipe }))
+  const addRecipeHandler = () => {
+    const newRecipe = { ...recipe, id: v4() }
+    dispatch(addTaskAC({ recipe: newRecipe }))
   }
 
   return (
     <Paper sx={style}>
       <LeftContainer>
-        <h2 style={{ margin: 5 }}>{header}</h2>
+        <h2 style={{ margin: 5 }}>{title}</h2>
         <IngredientContainer>
-          {ingredientList.map((el) => <p style={{ margin: 2 }}>{el}, </p>)}
+          {ingredients.map((el) => <p style={{ margin: 2 }}>{el.ingredient}, </p>)}
         </IngredientContainer>
       </LeftContainer>
       <RightContainer>
-        <Button variant="outlined" sx={{ color: theme.color, borderColor: theme.color }} onClick={onHandler}>Добавить в
-          меню</Button>
+        <Button variant="outlined" sx={{ color: theme.color, borderColor: theme.color }} onClick={addRecipeHandler}>Добавить в меню</Button>
       </RightContainer>
     </Paper>
   )
