@@ -4,7 +4,7 @@ export * from './utils/secondary/calculations'
 export * from './utils/types/type'
 export * from './utils/reduses/recipes-reduser'
 export * from './utils/feature/EditableSpan/EditableSpan'
-
+export * from './utils/feature/Select/SelectIngredients'
 
 export * from './components/modal/Modal'
 export * from './components/appBar/AppBar'

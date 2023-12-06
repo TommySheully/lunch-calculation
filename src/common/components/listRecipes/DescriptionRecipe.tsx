@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import Button from '@mui/material/Button'
 import { Paper } from '@mui/material'
 import { useAppDispatch } from 'app'
-import { addTaskAC, receiptsType, theme } from 'common'
+import { addRecipeAC, receiptsType, theme } from 'common'
 import { v4 } from 'uuid'
-
 
 type PropsType = {
   recipe: receiptsType
@@ -17,7 +16,7 @@ export const DescriptionRecipe = ({ recipe }: PropsType) => {
   const dispatch = useAppDispatch()
   const addRecipeHandler = () => {
     const newRecipe = { ...recipe, id: v4() }
-    dispatch(addTaskAC({ recipe: newRecipe }))
+    dispatch(addRecipeAC({ recipe: newRecipe }))
   }
 
   return (
@@ -25,7 +24,7 @@ export const DescriptionRecipe = ({ recipe }: PropsType) => {
       <LeftContainer>
         <h2 style={{ margin: 5 }}>{title}</h2>
         <IngredientContainer>
-          {ingredients.map((el) => <p style={{ margin: 2 }}>{el.ingredient}, </p>)}
+          {ingredients.map((el) => <p key={v4()}  style={{ margin: 2 }}>{el.ingredient}, </p>)}
         </IngredientContainer>
       </LeftContainer>
       <RightContainer>

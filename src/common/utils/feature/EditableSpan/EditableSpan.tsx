@@ -29,6 +29,6 @@ export const EditableSpan = memo(function ({ onChange, value }: EditableSpanProp
 
   return editMode
     ? <TextField size={'small'} value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode}
-                 inputProps={{ pattern: '[0-9]*' }}/>
+                 inputProps={{ pattern: '[0-9.]*' }}/>
     : <h4 onDoubleClick={activateEditMode}>{value}</h4>
 })

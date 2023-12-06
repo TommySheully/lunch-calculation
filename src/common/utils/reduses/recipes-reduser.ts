@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { receiptsType, RecipesReduserType, coefficient, calculation } from 'common'
+import { receiptsType, RecipesReduserType, coefficient, calculation, recipeType } from 'common'
 import { AppRootStateType } from 'app'
 
 
@@ -43,7 +43,7 @@ const slice = createSlice({
     updatePersonsAC(state, action: PayloadAction<{ newPersons: number }>) {
       state.persons = action.payload.newPersons
     },
-    addTaskAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
+    addRecipeAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
       state.recipes.push(action.payload.recipe)
     },
     updateRecipeAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
@@ -53,7 +53,11 @@ const slice = createSlice({
     removeRecipeAC(state, action: PayloadAction<{ id: string }>) {
       const index = state.recipes.findIndex(el => el.id === action.payload.id)
       state.recipes.splice(index, 1)
-    }
+    },
+    addIngredientAC(state, action: PayloadAction<{ id: string, ingredient: recipeType }>) {
+      const index = state.recipes.findIndex(el => el.id === action.payload.id)
+      state.recipes[index].ingredients.push(action.payload.ingredient)
+    },
   },
   extraReducers: (builder) => {
     /*    builder.addCase(addTodolistAC, (state, action) => {
@@ -71,4 +75,4 @@ const slice = createSlice({
 })
 
 export const recipesReducer = slice.reducer
-export const { addTaskAC, updateRecipeAC, removeRecipeAC, updatePersonsAC } = slice.actions
+export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC } = slice.actions

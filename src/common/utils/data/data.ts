@@ -1,4 +1,4 @@
-import { IngredientsType, receiptsType } from '../types/type'
+import { IngredientsType, receiptsType } from 'common'
 import { v4 } from 'uuid'
 
 export const ingredients: IngredientsType = {
