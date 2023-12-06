@@ -1,11 +1,9 @@
 import React from 'react'
 import { Paper } from '@mui/material'
-import { EditableSpan, IngredientsComponents, receiptsType, removeRecipeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC } from 'common'
+import { EditableSpan, IngredientsComponents, receiptsType, removeRecipeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC, ButtonAddIngredients } from 'common'
 import styled from 'styled-components'
 import { useAppDispatch } from 'app'
 import { DeleteIcon } from 'assets'
-import { ButtonAddIngredients } from './ingredientsComponents/ButtonAddIngredients'
-
 
 type PropsType = { recipe: receiptsType }
 

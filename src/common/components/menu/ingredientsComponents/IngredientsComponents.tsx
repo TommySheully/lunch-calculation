@@ -15,7 +15,7 @@ export const IngredientsComponents = ({ state, upDateRecipeCallback }: PropsType
 
   return (
     <Container>
-      <h4>{ingredient}</h4>
+      <h4 style={{ margin: '10px' }}>{ingredient}</h4>
       <RightContainer>
         <EditableSpan value={value!.toString()} onChange={upDateRecipeHandler}/>
         <h4>{measurement}</h4>
@@ -31,9 +31,9 @@ const Container = styled.div`
 
   height: 42px;
   width: 100%;
-
   margin-bottom: 5px;
-  padding: 0 5px;
+  gap: 10px;
+
   border: 1px solid;
 `
 
@@ -41,4 +41,5 @@ const RightContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0 10px;
+  margin: 0 10px;
 `

@@ -7,7 +7,7 @@ type EditableSpanPropsType = {
   onChange: (newValue: string) => void
 }
 
-export const EditableSpan = memo(function ({onChange, value}: EditableSpanPropsType) {
+export const EditableSpan = memo(function ({ onChange, value }: EditableSpanPropsType) {
 
   let [editMode, setEditMode] = useState(false)
   let [title, setTitle] = useState(value)
@@ -21,10 +21,14 @@ export const EditableSpan = memo(function ({onChange, value}: EditableSpanPropsT
     onChange(title)
   }
   const changeTitle = (e: ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.validity.valid) {
+      e.target.value = title
+    }
     setTitle(e.currentTarget.value)
   }
 
   return editMode
-    ? <TextField size={'small'} value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode}/>
+    ? <TextField size={'small'} value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode}
+                 inputProps={{ pattern: '[0-9]*' }}/>
     : <h4 onDoubleClick={activateEditMode}>{value}</h4>
 })

@@ -14,12 +14,12 @@ export const ButtonAddIngredients = () => {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  height: 42px;
+  height: 30px;
   width: 100%;
-
   margin-bottom: 5px;
-  padding: 0 5px;
+  gap: 10px;
+  
   border: 1px solid;
 `

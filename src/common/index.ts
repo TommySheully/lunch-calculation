@@ -13,6 +13,7 @@ export * from './components/menu/MenuComponent'
 export * from './components/menu/RecipeComponent'
 export * from './components/menu/Persons/Persons'
 export * from './components/menu/ingredientsComponents/IngredientsComponents'
+export * from './components/menu/ingredientsComponents/ButtonAddIngredients'
 
 export * from './components/listRecipes/ListRecipes'
 export * from './components/listRecipes/DescriptionRecipe'
