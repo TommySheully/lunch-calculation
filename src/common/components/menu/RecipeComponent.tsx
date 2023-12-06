@@ -1,9 +1,10 @@
 import React from 'react'
 import { Paper } from '@mui/material'
-import { EditableSpan, receiptsType, removeRecipeAC, updateRecipeAC, IngredientsComponents } from 'common'
+import { EditableSpan, IngredientsComponents, receiptsType, removeRecipeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC } from 'common'
 import styled from 'styled-components'
 import { useAppDispatch } from 'app'
 import { DeleteIcon } from 'assets'
+import { ButtonAddIngredients } from './ingredientsComponents/ButtonAddIngredients'
 
 
 type PropsType = { recipe: receiptsType }
@@ -11,10 +12,14 @@ type PropsType = { recipe: receiptsType }
 export const RecipeComponent = ({ recipe }: PropsType) => {
   const dispatch = useAppDispatch()
 
-  const upDateRecipeHandler = (newValue: string) => {
-    const newRecipe = { ...recipe, value: Number(newValue)}
-    dispatch(updateRecipeAC({ recipe: newRecipe }))
+  const upDatePersonRecipeHandler = (newValue: string) => {
+    dispatch(updatePersonsForRecipeTC({ recipe, newPersons: Number(newValue) }))
   }
+
+  const upDateRecipeHandler = (newValue: string, currentIngredient: string) => {
+    dispatch(updateIngredientsRecipeTC({ newValue, currentIngredient, recipe }))
+  }
+
   const deleteRecipeHandler = () => {
     dispatch(removeRecipeAC({ id: recipe.id }))
   }
@@ -28,11 +33,13 @@ export const RecipeComponent = ({ recipe }: PropsType) => {
                onClick={deleteRecipeHandler}/>
         </LeftHeaderComponent>
 
-        <EditableSpan value={recipe.value.toString()} onChange={upDateRecipeHandler}/>
+        <EditableSpan value={recipe.value.toString()} onChange={upDatePersonRecipeHandler}/>
       </HeaderComponent>
       <IngredientsContainer>
-        {recipe.ingredients.map((el) => <IngredientsComponents ingredient={el.ingredient} measurement={el.measurement}
-                                                               value={el.value}/>)}
+        {recipe.ingredients.map((el) => <IngredientsComponents
+          state={{ ingredient: el.ingredient, value: el.value, measurement: el.measurement }}
+          upDateRecipeCallback={upDateRecipeHandler}/>)}
+        <ButtonAddIngredients/>
       </IngredientsContainer>
     </Paper>
   )

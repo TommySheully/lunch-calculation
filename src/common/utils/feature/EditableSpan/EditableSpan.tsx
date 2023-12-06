@@ -25,6 +25,6 @@ export const EditableSpan = memo(function ({onChange, value}: EditableSpanPropsT
   }
 
   return editMode
-    ? <TextField value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode}/>
+    ? <TextField size={'small'} value={title} onChange={changeTitle} autoFocus onBlur={activateViewMode}/>
     : <h4 onDoubleClick={activateEditMode}>{value}</h4>
 })

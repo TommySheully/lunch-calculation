@@ -1,5 +1,6 @@
 export * from './utils/config/theme'
 export * from './utils/data/data'
+export * from './utils/secondary/calculations'
 export * from './utils/types/type'
 export * from './utils/reduses/recipes-reduser'
 export * from './utils/feature/EditableSpan/EditableSpan'

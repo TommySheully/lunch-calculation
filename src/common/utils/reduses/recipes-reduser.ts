@@ -1,15 +1,47 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { receiptsType, RecipesReduserType } from 'common'
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { receiptsType, RecipesReduserType, coefficient, calculation } from 'common'
+import { AppRootStateType } from 'app'
 
 
 const initialState: RecipesReduserType = { recipes: [], persons: 100 }
+
+export const updatePersonsTC = createAsyncThunk('recipes/updatePersonsTC', async (newPersons: number, { dispatch, getState }) => {
+  const { recipes } = getState() as AppRootStateType
+  const coefficientValue = coefficient({ newPersons, persons: recipes.persons })
+  for (let element of recipes.recipes) {
+    const recipe = calculation({ element, coefficientValue })
+    dispatch(updateRecipeAC({ recipe }))
+  }
+  dispatch(updatePersonsAC({ newPersons }))
+})
+
+export const updatePersonsForRecipeTC = createAsyncThunk('recipes/updatePersonsForRecipeTC', async (data: {
+  recipe: receiptsType,
+  newPersons: number
+}, { dispatch }) => {
+  const { recipe, newPersons } = data
+  const coefficientValue = coefficient({ newPersons, persons: recipe.value })
+  const newRecipe = calculation({ element: recipe, coefficientValue })
+  dispatch(updateRecipeAC({ recipe: newRecipe }))
+})
+
+export const updateIngredientsRecipeTC = createAsyncThunk('recipes/updateIngredientsRecipeTC', async (data: {
+  newValue: string, currentIngredient: string, recipe: receiptsType
+}, { dispatch }) => {
+  const {recipe, currentIngredient, newValue} = data
+  const newRecipe = { ...recipe,
+    ingredients: recipe.ingredients.map((el) => el.ingredient === currentIngredient
+      ? { ...el, value: Number(newValue) }
+      : {...el}) }
+  dispatch(updateRecipeAC({ recipe: newRecipe }))
+})
 
 const slice = createSlice({
   name: 'recipes',
   initialState: initialState,
   reducers: {
-    updatePersonsAC(state, action: PayloadAction<{ newValue: number }>) {
-      state.persons = action.payload.newValue
+    updatePersonsAC(state, action: PayloadAction<{ newPersons: number }>) {
+      state.persons = action.payload.newPersons
     },
     addTaskAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
       state.recipes.push(action.payload.recipe)
@@ -22,20 +54,6 @@ const slice = createSlice({
       const index = state.recipes.findIndex(el => el.id === action.payload.id)
       state.recipes.splice(index, 1)
     }
-    /*    removeTaskAC(state, action: PayloadAction<{ taskId: string, todolistId: string }>) {
-      const tasks = state[action.payload.todolistId]
-      const index = tasks.findIndex(t => t.id === action.payload.taskId)
-      tasks.splice(index, 1)
-    },*/
-    /*    updateTaskAC(state, action: PayloadAction<{
-          taskId: string,
-          model: UpdateDomainTaskModelType,
-          todolistId: string
-        }>) {
-          const tasks = state[action.payload.todolistId]
-          const index = tasks.findIndex(t => t.id === action.payload.taskId)
-          tasks[index] = {...tasks[index], ...action.payload.model}
-        }*/
   },
   extraReducers: (builder) => {
     /*    builder.addCase(addTodolistAC, (state, action) => {
