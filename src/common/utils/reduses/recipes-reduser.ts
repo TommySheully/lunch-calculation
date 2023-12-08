@@ -58,6 +58,11 @@ const slice = createSlice({
       const index = state.recipes.findIndex(el => el.id === action.payload.id)
       state.recipes[index].ingredients.push(action.payload.ingredient)
     },
+    removeIngredientAC(state, action: PayloadAction<{ recipeId: string, ingredientId: string }>) {
+      const indexRecepe = state.recipes.findIndex(el => el.id === action.payload.recipeId)
+      const indexIngr = state.recipes[indexRecepe].ingredients.findIndex(el => el.id === action.payload.ingredientId)
+      state.recipes[indexRecepe].ingredients.splice(indexIngr, 1)
+    },
   },
   extraReducers: (builder) => {
     /*    builder.addCase(addTodolistAC, (state, action) => {
@@ -75,4 +80,4 @@ const slice = createSlice({
 })
 
 export const recipesReducer = slice.reducer
-export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC } = slice.actions
+export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC, removeIngredientAC } = slice.actions

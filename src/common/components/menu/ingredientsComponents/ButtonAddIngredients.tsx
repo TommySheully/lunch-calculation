@@ -4,6 +4,7 @@ import { ingredients, measurementType, recipeType, SelectIngredients, theme } fr
 import Button from '@mui/material/Button'
 import { TextField } from '@mui/material'
 import { SubmitHandler, useController, useForm } from 'react-hook-form'
+import {v4} from "uuid";
 
 type PropsType = {
   addIngredientCallback: (ingredient: recipeType) => void
@@ -32,7 +33,7 @@ export const ButtonAddIngredients = ({ addIngredientCallback }: PropsType) => {
     const allIngredients = Object.values(ingredients).flat()
     const selectedIngredientData = allIngredients.find((i) => i.ingredient === ingredient)
     const measurement = selectedIngredientData!.measurement === undefined ? 'кг' as measurementType : selectedIngredientData!.measurement as measurementType
-    addIngredientCallback({ ingredient, measurement, value })
+    addIngredientCallback({ ingredient, measurement, value, id: v4() })
   }
 
   return (

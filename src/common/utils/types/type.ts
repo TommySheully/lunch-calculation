@@ -9,7 +9,8 @@ export type receiptsType = {
 export type recipeType = {
   ingredient: IngredientType|'итог'|'выход противней размером 40х60 (5х8 нарезка)'|'выход противней (7х9 нарезка)'|'тесто'|'соус'|'начинка'|'крем'|'масло для фритюра'|'кляр'
   measurement?: measurementType
-  value?: number
+  value?: number,
+  id: string
 }
 
 export type measurementType = 'кг'|'л'|'шт'|'банка'|'гр'

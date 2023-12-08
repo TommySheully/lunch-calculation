@@ -1,10 +1,9 @@
 import React from 'react'
 import { Paper } from '@mui/material'
-import { EditableSpan, IngredientsComponents, receiptsType, removeRecipeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC, ButtonAddIngredients, recipeType, addIngredientAC } from 'common'
+import { EditableSpan, IngredientsComponents, receiptsType, removeRecipeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC, ButtonAddIngredients, recipeType, addIngredientAC, removeIngredientAC } from 'common'
 import styled from 'styled-components'
 import { useAppDispatch } from 'app'
 import { DeleteIcon } from 'assets'
-import { v4 } from 'uuid'
 
 type PropsType = { recipe: receiptsType }
 
@@ -27,6 +26,10 @@ export const RecipeComponent = ({ recipe }: PropsType) => {
     dispatch(addIngredientAC({ id: recipe.id, ingredient }))
   }
 
+  const deleteIngrHandler = (id: string) => {
+    dispatch(removeIngredientAC({ recipeId: recipe.id, ingredientId: id }))
+  }
+
   return (
     <Paper sx={{ width: '60%', margin: '5px 0', padding: '0 15px' }}>
       <HeaderComponent>
@@ -39,9 +42,10 @@ export const RecipeComponent = ({ recipe }: PropsType) => {
         <EditableSpan value={recipe.value.toString()} onChange={upDatePersonRecipeHandler}/>
       </HeaderComponent>
       <IngredientsContainer>
-        {recipe.ingredients.map((el) => <IngredientsComponents key={v4()}
-                                                               state={{ ingredient: el.ingredient, value: el.value, measurement: el.measurement }}
-                                                               upDateRecipeCallback={upDateRecipeHandler}/>)}
+        {recipe.ingredients.map((el) => <IngredientsComponents key={el.id}
+                                                               state={{ ingredient: el.ingredient, value: el.value, measurement: el.measurement, id: el.id }}
+                                                               upDateRecipeCallback={upDateRecipeHandler}
+                                                               deleteIngrCallback={deleteIngrHandler}/>)}
         <ButtonAddIngredients addIngredientCallback={addIngredientHandler}/>
       </IngredientsContainer>
     </Paper>
