@@ -2,7 +2,7 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
-import { BasicModal } from 'common'
+import { BasicModal, Purchase } from 'common'
 
 export const AppBarComponent = () => {
   return (
@@ -10,6 +10,7 @@ export const AppBarComponent = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BasicModal />
+          <Purchase/>
         </Toolbar>
       </Container>
     </AppBar>

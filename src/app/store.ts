@@ -4,11 +4,12 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 import { configureStore } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
-import { recipesReducer } from 'common'
+import { recipesReducer, purchaseReducer } from 'common'
 
 
 const rootReducer = combineReducers({
   recipes: recipesReducer,
+  purchase: purchaseReducer,
 })
 
 export const store = configureStore({

@@ -1,15 +1,15 @@
 export type receiptsType = {
   title: string,
   value: number,
-  ingredients: recipeType[],
+  ingredients: recipeType[]
   description: string,
   id: string
 }
 
 export type recipeType = {
   ingredient: IngredientType|'итог'|'выход противней размером 40х60 (5х8 нарезка)'|'выход противней (7х9 нарезка)'|'тесто'|'соус'|'начинка'|'крем'|'масло для фритюра'|'кляр'
-  measurement?: measurementType
-  value?: number,
+  measurement: measurementType
+  value: number,
   id: string
 }
 
@@ -37,4 +37,8 @@ export type IngredientType = 'абрикос'|'ананас'|'апельсин'|
 export type RecipesReduserType = {
   recipes: receiptsType[]
   persons: number
+}
+
+export type PurchaseReduserType = {
+  purchase: recipeType[]
 }

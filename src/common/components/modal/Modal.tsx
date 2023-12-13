@@ -12,7 +12,7 @@ export const BasicModal = () => {
 
   return (
     <Box>
-      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={handleOpen}>Open modal</Button>
+      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={handleOpen}>Список блюд</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -22,7 +22,6 @@ export const BasicModal = () => {
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
           </Typography>
-
           <ListRecipes/>
         </Box>
       </Modal>
