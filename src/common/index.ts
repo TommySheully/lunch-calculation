@@ -21,6 +21,4 @@ export * from './components/menu/ingredientsComponents/ButtonAddIngredients'
 export * from './components/listRecipes/ListRecipes'
 export * from './components/listRecipes/DescriptionRecipe'
 
-export * from './components/Purchase/Purchase'
-
-
+export * from './components/purchase/Purchase'
