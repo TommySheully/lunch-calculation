@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button'
-import { exceptions, recipeType, setPurchaseAC, theme } from 'common'
+import { consolidatePurchaseItems, setPurchaseAC, theme } from 'common'
 import { recipesSelector, useAppDispatch, useAppSelector } from 'app'
 
 export const Purchase = () => {
@@ -8,30 +8,13 @@ export const Purchase = () => {
   const dispatch = useAppDispatch()
 
   const setPurchaseHandler = () => {
-    let purchase: recipeType[] = []
-    for (let variable of recipes) {
-      for (let ingredient of variable.ingredients) {
-        purchase.push(ingredient)
-      }
-    }
-
-    const purchaseCopy: recipeType[] = JSON.parse(JSON.stringify(purchase))
-    const newPurchase = purchaseCopy.reduce((acc, curr) => {
-      if (acc[curr.ingredient]) {
-        acc[curr.ingredient].value += curr.value
-      } else {
-        acc[curr.ingredient] = curr
-      }
-      return acc
-    }, {} as Record<string, recipeType>)
-    purchase = Object.values(newPurchase).filter(el => !exceptions.includes(el.ingredient))
+    const purchase = consolidatePurchaseItems(recipes)
     dispatch(setPurchaseAC({ purchase }))
   }
 
   return (
     <div>
-      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={setPurchaseHandler}>Скачать закупочный
-        лист</Button>
+      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={setPurchaseHandler}>Скачать закупочный лист</Button>
     </div>
   )
 }

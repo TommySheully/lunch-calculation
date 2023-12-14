@@ -8,7 +8,7 @@ export const MenuComponent = () => {
   const { recipes, persons } = useAppSelector(recipesSelector)
   const { purchase } = useAppSelector(purchaseSelector)
   const dispatch = useAppDispatch()
-
+  console.log(purchase)
   const updatePersonsHandler = (newPersons: string) => {
     dispatch(updatePersonsTC(Number(newPersons)))
   }
@@ -17,7 +17,7 @@ export const MenuComponent = () => {
     <Component>
       <Persons changePersons={updatePersonsHandler} persons={persons}/>
       {recipes.map((el) => <RecipeComponent key={el.id} recipe={el}/>)}
-      {purchase.map((el) => <p>{el.ingredient}</p>)}
+      {purchase.map((el) => <p key={el.id}>{el.ingredient}</p>)}
     </Component>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import {EditableSpan, recipeType} from 'common'
+import { EditableSpan, exceptionsIngr, recipeType } from 'common'
 import styled from 'styled-components'
-import {DeleteIcon} from "assets";
+import { DeleteIcon } from 'assets'
 
 type PropsType = {
   state: recipeType
   upDateRecipeCallback: (newValue: string, currentIngredient: string) => void
-    deleteIngrCallback: (id: string) => void
+  deleteIngrCallback: (id: string) => void
 }
 export const IngredientsComponents = ({ state, upDateRecipeCallback, deleteIngrCallback }: PropsType) => {
   const { ingredient, value, measurement, id } = state
@@ -15,22 +15,21 @@ export const IngredientsComponents = ({ state, upDateRecipeCallback, deleteIngrC
     upDateRecipeCallback(newValue, ingredient)
   }
 
-    const deleteIngrHandler = () => {
-        deleteIngrCallback(id)
-    }
+  const deleteIngrHandler = () => {
+    deleteIngrCallback(id)
+  }
 
   return (
     <Container>
-        <LeftHeaderComponent>
-            <h4 style={{ margin: '10px' }}>{ingredient}</h4>
-            <img style={{ margin: '8px' }} width={24} height={24} src={DeleteIcon} alt="Delete recepe icon"
-                 onClick={deleteIngrHandler}/>
-        </LeftHeaderComponent>
-
-      <RightContainer>
+      <LeftHeaderComponent>
+        <h4 style={{ margin: '10px' }}>{ingredient}</h4>
+        {!exceptionsIngr.includes(ingredient) && <img style={{ margin: '8px' }} width={24} height={24} src={DeleteIcon} alt="Delete recepe icon"
+              onClick={deleteIngrHandler}/>}
+      </LeftHeaderComponent>
+      {!exceptionsIngr.includes(ingredient) && <RightContainer>
         <EditableSpan value={value!.toString()} onChange={upDateRecipeHandler}/>
         <h4>{measurement}</h4>
-      </RightContainer>
+      </RightContainer>}
     </Container>
   )
 }
