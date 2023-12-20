@@ -2,8 +2,7 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
-import { BasicModal, Purchase } from 'common'
-import { PdfComponents } from '../pdf/PdfComponents'
+import { BasicModal, PurchaseSave, SaveMenu } from 'common'
 
 export const AppBarComponent = () => {
   return (
@@ -11,8 +10,8 @@ export const AppBarComponent = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <BasicModal/>
-          <Purchase/>
-          <PdfComponents/>
+          <PurchaseSave/>
+          <SaveMenu/>
         </Toolbar>
       </Container>
     </AppBar>

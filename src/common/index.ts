@@ -1,7 +1,9 @@
 export * from './utils/config/theme'
 export * from './utils/data/data'
-export * from './utils/secondary/calculations'
 export * from './utils/types/type'
+
+export * from './utils/secondary/calculations'
+export * from './utils/secondary/downloadPdf'
 
 export * from './utils/feature/EditableSpan/EditableSpan'
 export * from './utils/feature/Select/SelectIngredients'
@@ -21,4 +23,5 @@ export * from './components/menu/ingredientsComponents/ButtonAddIngredients'
 export * from './components/listRecipes/ListRecipes'
 export * from './components/listRecipes/DescriptionRecipe'
 
-export * from './components/purchase/Purchase'
+export * from './components/purchaseSave/purchaseSave'
+export * from './components/saveMenu/SaveMenu'
