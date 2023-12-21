@@ -1,5 +1,5 @@
 import React from 'react'
-import { EditableSpan, exceptionsIngr, recipeType } from 'common'
+import { EditableSpan, exceptionsIngredients, recipeType } from 'common'
 import styled from 'styled-components'
 import { DeleteIcon } from 'assets'
 
@@ -16,11 +16,11 @@ export const IngredientsComponents = ({ state, upDateRecipeCallback, deleteIngre
     <Container>
       <LeftHeaderComponent>
         <h4 style={{ margin: '10px' }}>{ingredient}</h4>
-        {!exceptionsIngr.includes(ingredient) &&
+        {!exceptionsIngredients.includes(ingredient) &&
           <img style={{ margin: '8px' }} width={24} height={24} src={DeleteIcon} alt="Delete recepe icon"
                onClick={deleteIngredientHandler}/>}
       </LeftHeaderComponent>
-      {!exceptionsIngr.includes(ingredient) && <RightContainer>
+      {!exceptionsIngredients.includes(ingredient) && <RightContainer>
         <EditableSpan value={value!.toString()} onChange={upDateRecipeHandler}/>
         <h4>{measurement}</h4>
       </RightContainer>}

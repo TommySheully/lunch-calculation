@@ -39,7 +39,7 @@ export const ModalAddIngredients = ({ addIngredientCallback }: PropsType) => {
 
   return (
     <Box>
-      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={handleOpen}>Добавить дополнительный ингредиент из списка</Button>
+      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={handleOpen}>Добавить ингредиент</Button>
       <Modal
         open={open}
         onClose={handleClose}

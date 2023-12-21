@@ -9,7 +9,6 @@ type PropsType = { recipe: receiptsType }
 
 export const RecipeComponent = ({ recipe }: PropsType) => {
   const dispatch = useAppDispatch()
-
   const upDatePersonRecipeHandler = (newValue: string) => dispatch(updatePersonsForRecipeTC({ recipe, newPersons: Number(newValue) }))
   const upDateRecipeHandler = (newValue: string, id: string) => dispatch(updateIngredientsRecipeTC({ newValue, id, recipe }))
   const deleteRecipeHandler = () => dispatch(removeRecipeAC({ id: recipe.id }))

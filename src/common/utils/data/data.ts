@@ -2,7 +2,7 @@ import { IngredientsType, receiptsType } from 'common'
 import { v4 } from 'uuid'
 
 export const exceptions = ['итог', 'выход противней размером 40х60 (5х8 нарезка)', 'выход противней (7х9 нарезка)', 'тесто', 'соус', 'начинка', 'крем', 'масло для фритюра', 'кляр', 'вода']
-export const exceptionsIngr = ['тесто', 'соус', 'начинка', 'крем', 'масло для фритюра', 'кляр']
+export const exceptionsIngredients = ['тесто', 'соус', 'начинка', 'крем', 'масло для фритюра', 'кляр']
 export const ingredients: IngredientsType = {
   fruits: [
     { ingredient: 'абрикос', measurement: 'кг' },
@@ -61,7 +61,7 @@ export const ingredients: IngredientsType = {
     { ingredient: 'авокадо', measurement: 'кг' },
     { ingredient: 'айсберг', measurement: 'кг' },
     { ingredient: 'баклажан', measurement: 'кг' },
-    { ingredient: 'базилик', measurement: 'кг' },
+    { ingredient: 'базилик свежий', measurement: 'гр' },
     { ingredient: 'батат', measurement: 'кг' },
     { ingredient: 'белокачанная капуста', measurement: 'кг' },
     { ingredient: 'брокколи капуста', measurement: 'кг' },
