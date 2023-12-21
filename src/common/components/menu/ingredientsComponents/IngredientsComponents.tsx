@@ -5,26 +5,20 @@ import { DeleteIcon } from 'assets'
 
 type PropsType = {
   state: recipeType
-  upDateRecipeCallback: (newValue: string, currentIngredient: string) => void
-  deleteIngrCallback: (id: string) => void
+  upDateRecipeCallback: (newValue: string, id: string) => void
+  deleteIngredientCallback: (id: string) => void
 }
-export const IngredientsComponents = ({ state, upDateRecipeCallback, deleteIngrCallback }: PropsType) => {
+export const IngredientsComponents = ({ state, upDateRecipeCallback, deleteIngredientCallback }: PropsType) => {
   const { ingredient, value, measurement, id } = state
-
-  const upDateRecipeHandler = (newValue: string) => {
-    upDateRecipeCallback(newValue, ingredient)
-  }
-
-  const deleteIngrHandler = () => {
-    deleteIngrCallback(id)
-  }
-
+  const upDateRecipeHandler = (newValue: string) => upDateRecipeCallback(newValue, id)
+  const deleteIngredientHandler = () =>   deleteIngredientCallback(id)
   return (
     <Container>
       <LeftHeaderComponent>
         <h4 style={{ margin: '10px' }}>{ingredient}</h4>
-        {!exceptionsIngr.includes(ingredient) && <img style={{ margin: '8px' }} width={24} height={24} src={DeleteIcon} alt="Delete recepe icon"
-              onClick={deleteIngrHandler}/>}
+        {!exceptionsIngr.includes(ingredient) &&
+          <img style={{ margin: '8px' }} width={24} height={24} src={DeleteIcon} alt="Delete recepe icon"
+               onClick={deleteIngredientHandler}/>}
       </LeftHeaderComponent>
       {!exceptionsIngr.includes(ingredient) && <RightContainer>
         <EditableSpan value={value!.toString()} onChange={upDateRecipeHandler}/>

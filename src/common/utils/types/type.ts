@@ -41,4 +41,5 @@ export type RecipesReduserType = {
 
 export type PurchaseReduserType = {
   purchase: recipeType[]
+  additionalPurchase: recipeType[]
 }

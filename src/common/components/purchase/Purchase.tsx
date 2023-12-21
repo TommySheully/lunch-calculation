@@ -1,25 +1,5 @@
-import React from 'react'
-import { purchaseSelector, useAppSelector } from 'app'
 import styled from 'styled-components'
-import { recipeType, theme } from 'common'
-
-export const PurchaseList = () => {
-  const { purchase } = useAppSelector(purchaseSelector)
-
-  return (
-    <Component id='pdf-purchase'>
-      {purchase.map(el => <Purchase id={el.id} value={el.value} ingredient={el.ingredient} measurement={el.measurement} />)}
-    </Component>
-  )
-}
-
-const Component = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background: ${theme.background};
-  width: 50%;
-`
+import { recipeType } from 'common'
 
 export const Purchase = ({ ingredient, value, measurement }: recipeType) => {
   return (
@@ -39,7 +19,6 @@ const Element = styled.div`
   justify-content: space-between;
 
   height: 24px;
-  width: 100%;
   padding: 3px;
   border: 1px solid;
 `
@@ -51,5 +30,3 @@ const RightContainer = styled.div`
   margin-right: 15px;
   gap: 30px;
 `
-
-

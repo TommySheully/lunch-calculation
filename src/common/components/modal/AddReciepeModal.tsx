@@ -12,7 +12,7 @@ export const BasicModal = () => {
 
   return (
     <Box>
-      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={handleOpen}>Список блюд</Button>
+      <Button sx={{ color: theme.color, borderColor: theme.color }} onClick={handleOpen}>Добавить блюдо из списка</Button>
       <Modal
         open={open}
         onClose={handleClose}

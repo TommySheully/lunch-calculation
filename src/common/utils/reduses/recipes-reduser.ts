@@ -26,11 +26,11 @@ export const updatePersonsForRecipeTC = createAsyncThunk('recipes/updatePersonsF
 })
 
 export const updateIngredientsRecipeTC = createAsyncThunk('recipes/updateIngredientsRecipeTC', async (data: {
-  newValue: string, currentIngredient: string, recipe: receiptsType
+  newValue: string, id: string, recipe: receiptsType
 }, { dispatch }) => {
-  const {recipe, currentIngredient, newValue} = data
+  const {recipe, id, newValue} = data
   const newRecipe = { ...recipe,
-    ingredients: recipe.ingredients.map((el) => el.ingredient === currentIngredient
+    ingredients: recipe.ingredients.map((el) => el.id === id
       ? { ...el, value: Number(newValue) }
       : {...el}) }
   dispatch(updateRecipeAC({ recipe: newRecipe }))
