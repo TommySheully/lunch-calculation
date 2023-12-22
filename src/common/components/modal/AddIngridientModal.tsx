@@ -7,6 +7,7 @@ import { SubmitHandler, useController, useForm } from 'react-hook-form'
 import { v4 } from 'uuid'
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
+import { Paper } from '@mui/material'
 
 type PropsType = {
   addIngredientCallback: (ingredient: recipeType) => void
@@ -47,18 +48,20 @@ export const ModalAddIngredients = ({ addIngredientCallback }: PropsType) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Container onSubmit={handleSubmit(onSubmit)}>
-            <SelectIngredients control={control}/>
-            {errors.ingredient && <p style={{ color: 'red' }}>Ингредиент необходимо выбрать.</p>}
-            <TextField size={'small'} onChange={changeTitle} autoFocus inputProps={{ pattern: '[0-9]*' }}
-                       label="Введите количество" onBlur={onBlur} value={value}/>
-            {errors.value && <p style={{ color: 'red' }}>Укажите количество.</p>}
+          <Paper>
+            <Container onSubmit={handleSubmit(onSubmit)}>
+              <SelectIngredients control={control}/>
+              {errors.ingredient && <p style={{ color: 'red' }}>Ингредиент необходимо выбрать.</p>}
+              <TextField size={'small'} onChange={changeTitle} autoFocus inputProps={{ pattern: '[0-9]*' }}
+                         label="Введите количество" onBlur={onBlur} value={value}/>
+              {errors.value && <p style={{ color: 'red' }}>Укажите количество.</p>}
 
-            <Button sx={{ color: theme.color, borderColor: theme.background }}
-                    onClick={handleSubmit(onSubmit)}>Добавить
-              новый
-              ингредиент</Button>
-          </Container>
+              <Button sx={{ color: theme.color, borderColor: theme.background }}
+                      onClick={handleSubmit(onSubmit)}>Добавить
+                новый
+                ингредиент</Button>
+            </Container>
+          </Paper>
         </Box>
       </Modal>
     </Box>
@@ -73,8 +76,6 @@ const Container = styled.form`
   width: 100%;
   margin-bottom: 5px;
   gap: 10px;
-
-  border: 1px solid;
 `
 const style = {
   position: 'absolute' as 'absolute',
@@ -84,7 +85,7 @@ const style = {
   width: '50%',
   height: '80%',
   bgcolor: theme.background,
-  border: '2px solid #000',
+  borderRadius: '5px',
   boxShadow: 24,
   p: 4,
   overflowY: 'auto',

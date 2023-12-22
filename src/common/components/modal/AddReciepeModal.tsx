@@ -37,7 +37,7 @@ const style = {
   width: '50%',
   height: '80%',
   bgcolor: theme.background,
-  border: '2px solid #000',
+  borderRadius: '5px',
   boxShadow: 24,
   p: 4,
   overflowY: 'auto',
