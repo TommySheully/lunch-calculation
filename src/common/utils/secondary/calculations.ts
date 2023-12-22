@@ -4,9 +4,7 @@ type CoefficientPropsType = { newPersons: number, persons: number }
 type CalculationPropsType = { element: receiptsType, coefficientValue: number }
 type ConsolidateType = { recipeItems: receiptsType[], additionalPurchase: recipeType[] }
 
-export const coefficient = ({ newPersons, persons }: CoefficientPropsType) => {
-  return (newPersons / persons)
-}
+export const coefficient = ({ newPersons, persons }: CoefficientPropsType) => (newPersons / persons)
 
 export const calculation = ({ element, coefficientValue }: CalculationPropsType) => {
   const add = { ...element }

@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { receiptsType, RecipesReduserType, coefficient, calculation, recipeType } from 'common'
 import { AppRootStateType } from 'app'
 
-
 const initialState: RecipesReduserType = { recipes: [], persons: 100 }
 
 export const updatePersonsTC = createAsyncThunk('recipes/updatePersonsTC', async (newPersons: number, { dispatch, getState }) => {
@@ -63,9 +62,9 @@ const slice = createSlice({
       state.recipes[index].ingredients.push(action.payload.ingredient)
     },
     removeIngredientAC(state, action: PayloadAction<{ recipeId: string, ingredientId: string }>) {
-      const indexRecepe = state.recipes.findIndex(el => el.id === action.payload.recipeId)
-      const indexIngr = state.recipes[indexRecepe].ingredients.findIndex(el => el.id === action.payload.ingredientId)
-      state.recipes[indexRecepe].ingredients.splice(indexIngr, 1)
+      const indexRecipe = state.recipes.findIndex(el => el.id === action.payload.recipeId)
+      const indexIngredient = state.recipes[indexRecipe].ingredients.findIndex(el => el.id === action.payload.ingredientId)
+      state.recipes[indexRecipe].ingredients.splice(indexIngredient, 1)
     },
   }
 })

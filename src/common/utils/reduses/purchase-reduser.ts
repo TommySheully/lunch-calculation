@@ -1,9 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { PurchaseReduserType, recipeType } from 'common'
 
-
 const initialState: PurchaseReduserType = { purchase: [], additionalPurchase: [] }
-
 
 const slice = createSlice({
   name: 'purchase',

@@ -17,7 +17,7 @@ export const PurchaseList = () => {
   useEffect(() => {
     const purchase = consolidatePurchaseItems({ recipeItems: recipes, additionalPurchase })
     dispatch(setPurchaseAC({ purchase }))
-  }, [additionalPurchase])
+  }, [dispatch, recipes, additionalPurchase])
 
   return (
     <Component id="pdf-purchase">

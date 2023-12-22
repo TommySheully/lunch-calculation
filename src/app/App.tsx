@@ -1,7 +1,6 @@
 import React from 'react'
-import { AppBarComponent, MenuComponent } from 'common'
+import { AppBarComponent, MenuComponent, PurchaseList } from 'common'
 import { Route, Routes } from 'react-router-dom'
-import { PurchaseList } from '../common/components/purchase/purchaseList'
 
 function App() {
   return (

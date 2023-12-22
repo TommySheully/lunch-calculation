@@ -11,7 +11,6 @@ export const MenuComponent = () => {
   const updatePersonsHandler = (newPersons: string) => dispatch(updatePersonsTC(Number(newPersons)))
   const clearMenuHandler = () => dispatch(clearRecipeAC())
   const savePdfHandler = () => savePdf('pdf-menu', 'menu')
-
   return (
     <Component id="pdf-menu">
       <Paper

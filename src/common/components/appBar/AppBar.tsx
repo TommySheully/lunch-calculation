@@ -1,10 +1,7 @@
 import React from 'react'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import Container from '@mui/material/Container'
-import Button from '@mui/material/Button'
+import { AppBar, Toolbar, Container, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
-import { theme } from '../../utils/config/theme'
+import { theme } from 'common'
 
 
 export const AppBarComponent = () => {

@@ -12,8 +12,8 @@ export * from './utils/feature/Button/ButtonUniversal'
 export * from './utils/reduses/recipes-reduser'
 export * from './utils/reduses/purchase-reduser'
 
-export * from './components/modal/AddReciepeModal'
-export * from './components/modal/AddIngridientModal'
+export * from './utils/feature/Modal/AddReciepeModal'
+export * from './utils/feature/Modal/AddIngridientModal'
 
 export * from './components/appBar/AppBar'
 
@@ -27,3 +27,4 @@ export * from './components/listRecipes/ListRecipes'
 export * from './components/listRecipes/DescriptionRecipe'
 
 export * from './components/purchase/Purchase'
+export * from './components/purchase/purchaseList'

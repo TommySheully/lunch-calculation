@@ -9,7 +9,6 @@ type PropsType = {
 }
 
 export const Persons = ({changePersons, persons}: PropsType) => {
-
   return (
     <Paper sx={{ width: '60%', margin: '5px 0', padding: '0 15px' }}>
       <Container>

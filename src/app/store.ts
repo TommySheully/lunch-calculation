@@ -6,8 +6,7 @@ import storage from 'redux-persist/lib/storage'
 import { configureStore } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { recipesReducer, purchaseReducer } from 'common'
-import { persistReducer } from 'redux-persist'
-import { persistStore } from 'redux-persist'
+import { persistReducer, persistStore } from 'redux-persist'
 
 const persistConfig = {
   key: 'root',

@@ -1,10 +1,8 @@
 import React from 'react'
-import { recipes } from 'common'
+import { DescriptionRecipe, recipes } from 'common'
 import styled from 'styled-components'
-import { DescriptionRecipe } from './DescriptionRecipe'
 
 export const ListRecipes = () => {
-
   return (
     <Component>
       {recipes.map((el) => <DescriptionRecipe key={el.id} recipe={el}/>)}
