@@ -12,8 +12,8 @@ const slice = createSlice({
     setPurchaseAC(state, action: PayloadAction<{ purchase: recipeType[] }>) {
       state.purchase = action.payload.purchase
     },
-    setAdditionalPurchaseAC(state, action: PayloadAction<{ additionalPurchase: recipeType[] }>) {
-      state.additionalPurchase = action.payload.additionalPurchase
+    clearPurchaseAC(state) {
+      state.additionalPurchase = []
     },
     addAdditionalPurchaseAC(state, action: PayloadAction<{ additionalPurchase: recipeType }>) {
       state.additionalPurchase.push(action.payload.additionalPurchase)
@@ -30,4 +30,4 @@ const slice = createSlice({
 })
 
 export const purchaseReducer = slice.reducer
-export const { setPurchaseAC, addAdditionalPurchaseAC, updateAdditionalPurchaseAC, removeAdditionalPurchaseAC } = slice.actions
+export const { setPurchaseAC, addAdditionalPurchaseAC, updateAdditionalPurchaseAC, removeAdditionalPurchaseAC, clearPurchaseAC } = slice.actions

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { purchaseSelector, recipesSelector, useAppDispatch, useAppSelector } from 'app'
 import styled from 'styled-components'
-import { addAdditionalPurchaseAC, consolidatePurchaseItems, IngredientsComponents, ModalAddIngredients, Purchase, PurchaseSaveButton, recipeType, removeAdditionalPurchaseAC, setPurchaseAC, theme, updateAdditionalPurchaseAC } from 'common'
+import { addAdditionalPurchaseAC, ButtonUniversal, clearPurchaseAC, consolidatePurchaseItems, IngredientsComponents, ModalAddIngredients, Purchase, recipeType, removeAdditionalPurchaseAC, savePdf, setPurchaseAC, theme, updateAdditionalPurchaseAC } from 'common'
 import { Paper } from '@mui/material'
 
 export const PurchaseList = () => {
@@ -11,9 +11,11 @@ export const PurchaseList = () => {
   const addIngredientHandler = (ingredient: recipeType) => dispatch(addAdditionalPurchaseAC({ additionalPurchase: ingredient }))
   const removeAdditionalPurchaseHandler = (id: string) => dispatch(removeAdditionalPurchaseAC({ id }))
   const updateAdditionalPurchaseHandler = (newValue: string, id: string) => dispatch(updateAdditionalPurchaseAC({ newValue: Number(newValue), id }))
+  const clearPurchaseHandler = () => dispatch(clearPurchaseAC())
+  const savePurchaseHandler = () => savePdf('pdf-purchase', 'purchase')
 
   useEffect(() => {
-    const purchase = consolidatePurchaseItems({recipeItems: recipes, additionalPurchase})
+    const purchase = consolidatePurchaseItems({ recipeItems: recipes, additionalPurchase })
     dispatch(setPurchaseAC({ purchase }))
   }, [additionalPurchase])
 
@@ -22,7 +24,8 @@ export const PurchaseList = () => {
       <Paper
         sx={{ width: '60%', margin: '5px 0', padding: '0 15px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <ModalAddIngredients addIngredientCallback={addIngredientHandler}/>
-        <PurchaseSaveButton/>
+        <ButtonUniversal title={'очистить дополнительный список закупки'} callback={clearPurchaseHandler}/>
+        <ButtonUniversal title={'скачать закупочный лист'} callback={savePurchaseHandler}/>
       </Paper>
       <Paper sx={{ width: '60%', margin: '5px 0', padding: '15px' }}>
         <Header>Список дополнительных ингридиентов к закупке (автоматически

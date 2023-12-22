@@ -46,6 +46,10 @@ const slice = createSlice({
     addRecipeAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
       state.recipes.push(action.payload.recipe)
     },
+    clearRecipeAC(state) {
+      state.recipes = []
+      state.persons = 100
+    },
     updateRecipeAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
       const index = state.recipes.findIndex(el => el.id === action.payload.recipe.id)
       state.recipes[index] = action.payload.recipe
@@ -63,21 +67,8 @@ const slice = createSlice({
       const indexIngr = state.recipes[indexRecepe].ingredients.findIndex(el => el.id === action.payload.ingredientId)
       state.recipes[indexRecepe].ingredients.splice(indexIngr, 1)
     },
-  },
-  extraReducers: (builder) => {
-    /*    builder.addCase(addTodolistAC, (state, action) => {
-          state[action.payload.todolist.id] = []
-        })
-        builder.addCase(removeTodolistAC, (state, action) => {
-          delete state[action.payload.id]
-        })
-        builder.addCase(setTodolistsAC, (state, action) => {
-          action.payload.todolists.forEach(tl => {
-            state[tl.id] = []
-          })
-        })*/
   }
 })
 
 export const recipesReducer = slice.reducer
-export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC, removeIngredientAC } = slice.actions
+export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC, removeIngredientAC, clearRecipeAC } = slice.actions
