@@ -8,11 +8,9 @@
 <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"> 
 <img alt="Redux Toolkit" src="https://img.shields.io/badge/Redux Toolkit-593D88?style=for-the-badge&logo=redux&logoColor=white">
 <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"> 
- 
-<img alt="React Hook Form" src="https://img.shields.io/badge/React%20Hook%20Form-blue?style=for-the-badge"> 
+<img alt="React Hook Form" src="https://img.shields.io/badge/React%20Hook%20Form-pink?style=for-the-badge">
 <img alt="Styled Components" src="https://img.shields.io/badge/Styled%20Components-orange?style=for-the-badge"> 
 <img alt="Redux Persist" src="https://img.shields.io/badge/Redux%20Persist-green?style=for-the-badge">
-
 <img alt="MaterialUI" src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white">
  </div>
  
