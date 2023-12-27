@@ -19,6 +19,7 @@ export const ingredients: IngredientsType = {
     { ingredient: 'мандарин', measurement: 'кг' },
     { ingredient: 'манго', measurement: 'кг' },
     { ingredient: 'нектарин', measurement: 'кг' },
+    { ingredient: 'слива', measurement: 'кг' },
     { ingredient: 'персик', measurement: 'кг' },
     { ingredient: 'яблоко', measurement: 'кг' },
     { ingredient: 'черника', measurement: 'кг' },
@@ -46,6 +47,7 @@ export const ingredients: IngredientsType = {
     { ingredient: 'перловка', measurement: 'кг' },
     { ingredient: 'пшено', measurement: 'кг' },
     { ingredient: 'рис басмати', measurement: 'кг' },
+    { ingredient: 'рис круглый', measurement: 'кг' },
     { ingredient: 'рисовые хлопья', measurement: 'кг' },
     { ingredient: 'розовая вода', measurement: 'л' },
     { ingredient: 'сахар', measurement: 'кг' },
@@ -178,6 +180,7 @@ export const ingredients: IngredientsType = {
     { ingredient: 'розмарин', measurement: 'гр' },
     { ingredient: 'шафран', measurement: 'гр' },
     { ingredient: 'шалфей', measurement: 'гр' },
+    { ingredient: 'фенхель', measurement: 'гр' },
     { ingredient: 'чабрец', measurement: 'гр' },
     { ingredient: 'чили сухой молотый', measurement: 'гр' },
     { ingredient: 'черный перец молотый', measurement: 'гр' },
@@ -303,75 +306,6 @@ export const recipes: receiptsType[] = [
       { ingredient: 'итог', measurement: 'л', value: 40, id: v4(), exclude: true }
     ],
     description: 'Закипятить воду, добавить сахар, лимонный сок, каркадэ, специи, имбирь предварительно натёртый, сок виноградный. После кипения выключить газ и добавить шкурки лимона, и нарезанный апельсин. Закрыть крышкой оставить настаиваться, чем дольше настаивается, тем вкуснее. Процедить перед разливом.',
-    id: v4()
-  },
-  {
-    title: 'шарлотка',
-    value: 100,
-    ingredients: [
-      { ingredient: 'мука высший сорт', measurement: 'кг', value: 2.67, id: v4() },
-      { ingredient: 'манная крупа', measurement: 'кг', value: 2.29, id: v4() },
-      { ingredient: 'сахар', measurement: 'кг', value: 1.33, id: v4() },
-      { ingredient: 'грецкий орех', measurement: 'кг', value: 0.83, id: v4() },
-      { ingredient: 'яблоко', measurement: 'кг', value: 5.73, id: v4() },
-      { ingredient: 'масло подсолнечное', measurement: 'л', value: 1.15, id: v4() },
-      { ingredient: 'кефир', measurement: 'л', value: 3.82, id: v4() },
-      { ingredient: 'лимонная кислота', measurement: 'гр', value: 114.7, id: v4() },
-      { ingredient: 'сода', measurement: 'гр', value: 114.7, id: v4() },
-      { ingredient: 'ванилин', measurement: 'гр', value: 12.5, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4(), exclude: true  }
-    ],
-    description: 'Яблоки нарезать на кусочки. Грецкий орех обжарить в конвектомате до характерного цвета и запаха, и мелко нарезать.  Смажьте противни маслом, а потом посыпте манкой, что бы они были покрыты тонким слоем манки, для того, что бы шарлотка не пристала после запекания к противню. Смешать муку, манку, масло, сахар, кефир, лимонную кислоту, соду, ванилин и вымесить тесто. Добавить туда яблоки и грецкий орех, вымешать. После замешивания теста лимонка и сода вступают в реакцию, которая поднимает тесто. Чтобы пирог поднялся, нужно после вымешивания тесто как можно быстрее поставить его печься.',
-    id: v4()
-  },
-  {
-    title: 'бурфи с семечками подсолнуха',
-    value: 100,
-    ingredients: [
-      { ingredient: 'сухое молоко', measurement: 'кг', value: 1.867, id: v4() },
-      { ingredient: 'сахар', measurement: 'кг', value: 0.94, id: v4() },
-      { ingredient: 'семечки подсолнечника', measurement: 'кг', value: 0.64, id: v4() },
-      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
-      { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
-      { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
-      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
-    ],
-    description: 'Семечки обжариваем в конвектомате до характерного запаха и цвета. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин и начинаем постепенно добавлять по пачке сухое молоко и семечки, вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем по нужному размеру.',
-    id: v4()
-  },
-  {
-    title: 'бурфи лимонное',
-    value: 100,
-    ingredients: [
-      { ingredient: 'сухое молоко', measurement: 'кг', value: 1.8, id: v4() },
-      { ingredient: 'сахар', measurement: 'кг', value: 0.94, id: v4() },
-      { ingredient: 'цукаты', measurement: 'кг', value: 0.6, id: v4() },
-      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
-      { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
-      { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'лимон', measurement: 'гр', value: 1.5, id: v4() },
-      { ingredient: 'куркума молотая', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
-      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
-    ],
-    description: 'Цукаты замачиваем в воде. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин, лимонный сок, цедру от лимонов, куркуму и начинаем постепенно добавлять по пачке сухое молоко и цукаты (из которых нужно слить воду), вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем по нужному размеру.',
-    id: v4()
-  },
-  {
-    title: 'бурфи кунжутные',
-    value: 100,
-    ingredients: [
-      { ingredient: 'сухое молоко', measurement: 'кг', value: 1.8, id: v4() },
-      { ingredient: 'сахар', measurement: 'кг', value: 0.94, id: v4() },
-      { ingredient: 'кунжут', measurement: 'кг', value: 0.7, id: v4() },
-      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
-      { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
-      { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
-      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
-    ],
-    description: 'Кунжут обжариваем в конвектомате до характерного запаха и цвета. 50% кунжута смолоть в мелкую фракцию. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин и начинаем постепенно добавлять по пачке сухое молоко и кунжут, вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем как нужно.',
     id: v4()
   },
   {
@@ -650,6 +584,32 @@ export const recipes: receiptsType[] = [
     id: v4()
   },
   {
+    title: 'чатни сливовое',
+    value: 100,
+    ingredients: [
+      { ingredient: 'слива', measurement: 'кг', value: 10, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.2, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 2.3, id: v4() },
+      { ingredient: 'лимон', measurement: 'кг', value: 1, id: v4() },
+      { ingredient: 'вода', measurement: 'л', value: 2, id: v4() },
+      { ingredient: 'имбирь', measurement: 'кг', value: 0.5, id: v4() },
+      { ingredient: 'крахмал кукурузный', measurement: 'кг', value: 0.3, id: v4() },
+
+      { ingredient: 'черный перец молотый', measurement: 'гр', value: 50, id: v4() },
+      { ingredient: 'чили сухой молотый', measurement: 'гр', value: 10, id: v4() },
+      { ingredient: 'корица молотая', measurement: 'гр', value: 20, id: v4() },
+      { ingredient: 'фенхель', measurement: 'гр', value: 10, id: v4() },
+      { ingredient: 'бадьян', measurement: 'гр', value: 20, id: v4() },
+      { ingredient: 'гвоздика молотая', measurement: 'гр', value: 10, id: v4() },
+      { ingredient: 'лавровый лист молотый', measurement: 'гр', value: 10, id: v4() },
+
+      { ingredient: 'соль', measurement: 'гр', value: 60, id: v4() },
+      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4(), exclude: true }
+    ],
+    description: 'Имбирь, лимон, измельчать блендером, добавив 1 литр воды. Потом все это тушим с маслом на хорошем огне, помешивая. Доводим до кипения. Через 5 минут кипения добавляем вишню. Довести до кипения и поварить 10 минут. Добавляем оставшуюся воду взбитую блендером с крахмалом, солью и сахаром. Довести до кипения. Выключить вынести на холод, чтобы остыло до градусов 10-15. Часть вишни так же можно перебить блендером.',
+    id: v4()
+  },
+  {
     title: 'казинаки',
     value: 100,
     ingredients: [
@@ -691,30 +651,10 @@ export const recipes: receiptsType[] = [
       { ingredient: 'кориандр молотый', measurement: 'гр', value: 15, id: v4() },
       { ingredient: 'асафетида', measurement: 'гр', value: 30, id: v4() },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 0.3, id: v4() },
-      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true  },
+      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 3, id: v4() }
     ],
     description: 'Для теста все смешиваем, вымешиваем и убираем настояться. Для начинки: цветную капусту на мелкие соцветия и запекаем, адыгейский сыр нарезаем 2х2 см и запекаем, шпинат размораживаем и через сито убираем лишнюю влагу, томаты нарезаем кубиком 2х2 см. делаем масалу: масло обжариваем со специями, затем обжариваем томатную пасту, добавляем сахар и сметану. Смешиваем все ингредиенты начинки. Формируем самосы и запекаем в духовке или жарим во фритюре.',
-    id: v4()
-  },
-  {
-    title: 'муравейник',
-    value: 100,
-    ingredients: [
-      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
-      { ingredient: 'мука высший сорт', measurement: 'кг', value: 3.3, id: v4() },
-      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.3, id: v4() },
-      { ingredient: 'кефир', measurement: 'л', value: 0.8, id: v4() },
-      { ingredient: 'соль', measurement: 'гр', value: 88, id: v4() },
-      { ingredient: 'ванилин', measurement: 'гр', value: 6, id: v4() },
-      { ingredient: 'крем', measurement: 'кг', value: 0, id: v4() },
-      { ingredient: 'сгущенка вареная, банка', measurement: 'банка', value: 11.7, id: v4() },
-      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.6, id: v4() },
-      { ingredient: 'арахис', measurement: 'кг', value: 0.8, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4(), exclude: true  },
-      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4(), exclude: true }
-    ],
-    description: 'Тесто: все мешаем (масло не замороженное должно быть). Тесто тонко раскатываем на противне и запекаем при 180 градусах до готовности, затем или ломаем до необходимой фракции, или блендерим в пыль. Крем: мягкое сливочное масло и варёную сгущенку смешиваем и миксером сзбиваем до получения состояния крема. Арахис обжариваем в конвектовате 160 градусах до золотистого цвета и характерного аромата, затем измельчаем. Все смешаваем всете: тесто, крем и арахис. Раскладываем на противня и в холодильник, оставляем на ночь или 7-8 часов настояться.',
     id: v4()
   },
   {
@@ -733,7 +673,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'крахмал картофельный', measurement: 'кг', value: 0.175, id: v4() },
       { ingredient: 'карри молотый', measurement: 'гр', value: 35, id: v4() },
       { ingredient: 'асафетида', measurement: 'гр', value: 35, id: v4() },
-      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true  },
+      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 3, id: v4() },
       { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4(), exclude: true },
       { ingredient: 'итог', measurement: 'шт', value: 100, id: v4(), exclude: true }
@@ -845,9 +785,128 @@ export const recipes: receiptsType[] = [
       { ingredient: 'ванилин', measurement: 'гр', value: 35, id: v4() },
       { ingredient: 'кэроб', measurement: 'гр', value: 600, id: v4() },
       { ingredient: 'фундук', measurement: 'кг', value: 1.5, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4(), exclude: true  }
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4(), exclude: true }
     ],
     description: 'Фундук обжарить в конвектомате до характерного цвета и запаха, и нарезать на не очень мелкую фракцию.  Смажьте противни маслом, накройте пергаментной бумагой, или посыпте манкой, что бы они были покрыты тонким слоем манки, для того, что бы брауни не пристал после запекания к противню. Смешать масло, сахар, банан, и блендерните до однородности, добавьте туда муку, разрыхлитель, ванилин, фундук, кэроб и вымесите тесто. После замешивания теста лимонка и сода вступают в реакцию, которая поднимает тесто. Чтобы пирог поднялся, нужно после вымешивания тесто как можно быстрее поставить его печься. Выпекать при 180 градусах. Проверять на готовность зубочисткой.',
+    id: v4()
+  },
+  {
+    title: 'муравейник',
+    value: 100,
+    ingredients: [
+      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
+      { ingredient: 'мука высший сорт', measurement: 'кг', value: 3.3, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.3, id: v4() },
+      { ingredient: 'кефир', measurement: 'л', value: 0.8, id: v4() },
+      { ingredient: 'соль', measurement: 'гр', value: 88, id: v4() },
+      { ingredient: 'ванилин', measurement: 'гр', value: 6, id: v4() },
+      { ingredient: 'крем', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'сгущенка вареная, банка', measurement: 'банка', value: 11.7, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.6, id: v4() },
+      { ingredient: 'арахис', measurement: 'кг', value: 0.8, id: v4() },
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4(), exclude: true }
+    ],
+    description: 'Тесто: все мешаем (масло не замороженное должно быть). Тесто тонко раскатываем на противне и запекаем при 180 градусах до готовности, затем или ломаем до необходимой фракции, или блендерим в пыль. Крем: мягкое сливочное масло и варёную сгущенку смешиваем и миксером сзбиваем до получения состояния крема. Арахис обжариваем в конвектовате 160 градусах до золотистого цвета и характерного аромата, затем измельчаем. Все смешаваем всете: тесто, крем и арахис. Раскладываем на противня и в холодильник, оставляем на ночь или 7-8 часов настояться.',
+    id: v4()
+  }, {
+    title: 'шарлотка',
+    value: 100,
+    ingredients: [
+      { ingredient: 'мука высший сорт', measurement: 'кг', value: 2.67, id: v4() },
+      { ingredient: 'манная крупа', measurement: 'кг', value: 2.29, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 1.33, id: v4() },
+      { ingredient: 'грецкий орех', measurement: 'кг', value: 0.83, id: v4() },
+      { ingredient: 'яблоко', measurement: 'кг', value: 5.73, id: v4() },
+      { ingredient: 'масло подсолнечное', measurement: 'л', value: 1.15, id: v4() },
+      { ingredient: 'кефир', measurement: 'л', value: 3.82, id: v4() },
+      { ingredient: 'лимонная кислота', measurement: 'гр', value: 114.7, id: v4() },
+      { ingredient: 'сода', measurement: 'гр', value: 114.7, id: v4() },
+      { ingredient: 'ванилин', measurement: 'гр', value: 12.5, id: v4() },
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4(), exclude: true }
+    ],
+    description: 'Яблоки нарезать на кусочки. Грецкий орех обжарить в конвектомате до характерного цвета и запаха, и мелко нарезать.  Смажьте противни маслом, а потом посыпте манкой, что бы они были покрыты тонким слоем манки, для того, что бы шарлотка не пристала после запекания к противню. Смешать муку, манку, масло, сахар, кефир, лимонную кислоту, соду, ванилин и вымесить тесто. Добавить туда яблоки и грецкий орех, вымешать. После замешивания теста лимонка и сода вступают в реакцию, которая поднимает тесто. Чтобы пирог поднялся, нужно после вымешивания тесто как можно быстрее поставить его печься.',
+    id: v4()
+  },
+  {
+    title: 'бурфи с семечками подсолнуха',
+    value: 100,
+    ingredients: [
+      { ingredient: 'сухое молоко', measurement: 'кг', value: 1.867, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 0.94, id: v4() },
+      { ingredient: 'семечки подсолнечника', measurement: 'кг', value: 0.64, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
+      { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
+      { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
+    ],
+    description: 'Семечки обжариваем в конвектомате до характерного запаха и цвета. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин и начинаем постепенно добавлять по пачке сухое молоко и семечки, вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем по нужному размеру.',
+    id: v4()
+  },
+  {
+    title: 'бурфи лимонное',
+    value: 100,
+    ingredients: [
+      { ingredient: 'сухое молоко', measurement: 'кг', value: 1.8, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 0.94, id: v4() },
+      { ingredient: 'цукаты', measurement: 'кг', value: 0.6, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
+      { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
+      { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
+      { ingredient: 'лимон', measurement: 'гр', value: 1.5, id: v4() },
+      { ingredient: 'куркума молотая', measurement: 'гр', value: 6.5, id: v4() },
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
+    ],
+    description: 'Цукаты замачиваем в воде. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин, лимонный сок, цедру от лимонов, куркуму и начинаем постепенно добавлять по пачке сухое молоко и цукаты (из которых нужно слить воду), вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем по нужному размеру.',
+    id: v4()
+  },
+  {
+    title: 'бурфи кунжутные',
+    value: 100,
+    ingredients: [
+      { ingredient: 'сухое молоко', measurement: 'кг', value: 1.8, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 0.94, id: v4() },
+      { ingredient: 'кунжут', measurement: 'кг', value: 0.7, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
+      { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
+      { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
+    ],
+    description: 'Кунжут обжариваем в конвектомате до характерного запаха и цвета. 50% кунжута смолоть в мелкую фракцию. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин и начинаем постепенно добавлять по пачке сухое молоко и кунжут, вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем как нужно.',
+    id: v4()
+  },
+  {
+    title: 'ладу',
+    value: 100,
+    ingredients: [
+      { ingredient: 'нутовая мука', measurement: 'кг', value: 1.2, id: v4() },
+      { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.2, id: v4() },
+      { ingredient: 'сгущенка, банка', measurement: 'банка', value: 5, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 0.3, id: v4() },
+      { ingredient: 'кешью', measurement: 'кг', value: 0.3, id: v4() },
+      { ingredient: 'изюм', measurement: 'кг', value: 0.3, id: v4() },
+      { ingredient: 'кардамон молотый', measurement: 'гр', value: 15, id: v4() },
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+    ],
+    description: 'Обжарить нутовую муку в масле. Когда мука станет цвета мокрого песка, воздушной «как крем» и появится ореховый запах, выключаем огонь. Добавить кардамон, сахарную пудру, перемешать. Добавить сгущенку, орехи (предварительно обжаренные), изюм (предварительно промытый).',
+    id: v4()
+  },
+  {
+    title: 'сладкий рис',
+    value: 100,
+    ingredients: [
+      { ingredient: 'молоко', measurement: 'кг', value: 31, id: v4() },
+      { ingredient: 'рис круглый', measurement: 'кг', value: 0.6, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 2.4, id: v4() },
+      { ingredient: 'лавровый лист', measurement: 'гр', value: 5.5, id: v4() },
+      { ingredient: 'шафран', measurement: 'гр', value: 1, id: v4() },
+      { ingredient: 'розовая вода', measurement: 'л', value: 0.5, id: v4() },
+      { ingredient: 'итог', measurement: 'л', value: 22.8, id: v4(), exclude: true }
+    ],
+    description: 'Обжарить нутовую муку в масле. Когда мука станет цвета мокрого песка, воздушной «как крем» и появится ореховый запах, выключаем огонь. Добавить кардамон, сахарную пудру, перемешать. Добавить сгущенку, орехи (предварительно обжаренные), изюм (предварительно промытый).',
     id: v4()
   }
 ]
