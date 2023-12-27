@@ -161,6 +161,7 @@ export const ingredients: IngredientsType = {
     { ingredient: 'корица молотая', measurement: 'гр' },
     { ingredient: 'кумин молотый', measurement: 'гр' },
     { ingredient: 'куркума молотая', measurement: 'гр' },
+    { ingredient: 'кэроб', measurement: 'гр' },
     { ingredient: 'лавровый лист', measurement: 'гр' },
     { ingredient: 'лавровый лист молотый', measurement: 'гр' },
     { ingredient: 'листья шамбалы', measurement: 'гр' },
@@ -173,6 +174,7 @@ export const ingredients: IngredientsType = {
     { ingredient: 'паприка молотая', measurement: 'гр' },
     { ingredient: 'петрушка', measurement: 'гр' },
     { ingredient: 'порошок горчицы', measurement: 'гр' },
+    { ingredient: 'разрыхлитель', measurement: 'гр' },
     { ingredient: 'розмарин', measurement: 'гр' },
     { ingredient: 'шафран', measurement: 'гр' },
     { ingredient: 'шалфей', measurement: 'гр' },
@@ -828,6 +830,24 @@ export const recipes: receiptsType[] = [
       { ingredient: 'итог', measurement: 'шт', value: 17.8, id: v4(), exclude: true }
     ],
     description: 'Морковь почистить и отварить, нарезать размером с горох. Картофель сначала почистить и нарезать, а потом отварить с лимонной кислотой или соком лимона в большом количестве воды. Засыпать в кипяток картофель, когда будет готов слить кипяток и залить холодной водой, чтобы не переварился. Адыгейский сыр и огурцы нарезать размером с горох. Джил смолоть в порошок в блендере насухо. Огурцы нарезать размером с горох. Укроп и петрушку нарезать. Все замешать и в холодильник.',
+    id: v4()
+  },
+  {
+    title: 'брауни',
+    value: 100,
+    ingredients: [
+      { ingredient: 'мука высший сорт', measurement: 'кг', value: 1.1, id: v4() },
+      { ingredient: 'мука 1й сорт', measurement: 'кг', value: 1.1, id: v4() },
+      { ingredient: 'банан', measurement: 'кг', value: 3.4, id: v4() },
+      { ingredient: 'масло подсолнечное', measurement: 'кг', value: 1.5, id: v4() },
+      { ingredient: 'сахар', measurement: 'кг', value: 1.5, id: v4() },
+      { ingredient: 'разрыхлитель', measurement: 'гр', value: 80, id: v4() },
+      { ingredient: 'ванилин', measurement: 'гр', value: 35, id: v4() },
+      { ingredient: 'кэроб', measurement: 'гр', value: 600, id: v4() },
+      { ingredient: 'фундук', measurement: 'кг', value: 1.5, id: v4() },
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4(), exclude: true  }
+    ],
+    description: 'Фундук обжарить в конвектомате до характерного цвета и запаха, и нарезать на не очень мелкую фракцию.  Смажьте противни маслом, накройте пергаментной бумагой, или посыпте манкой, что бы они были покрыты тонким слоем манки, для того, что бы брауни не пристал после запекания к противню. Смешать масло, сахар, банан, и блендерните до однородности, добавьте туда муку, разрыхлитель, ванилин, фундук, кэроб и вымесите тесто. После замешивания теста лимонка и сода вступают в реакцию, которая поднимает тесто. Чтобы пирог поднялся, нужно после вымешивания тесто как можно быстрее поставить его печься. Выпекать при 180 градусах. Проверять на готовность зубочисткой.',
     id: v4()
   }
 ]
