@@ -38,7 +38,7 @@ export const PurchaseList = () => {
       </Paper>
       <Paper sx={{ width: '60%', margin: '5px 0', padding: '15px' }}>
         <Header>Итоговый список на закупку (из рецептов и дополнительного списка):</Header>
-        {purchase.map(el => <Purchase key={el.id} id={el.id} value={el.value} ingredient={el.ingredient}
+        {purchase.map(el => <Purchase key={el.id} id={el.id} value={Number((el.value).toFixed(2))} ingredient={el.ingredient}
                                       measurement={el.measurement}/>)}
       </Paper>
     </Component>
