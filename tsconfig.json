@@ -23,6 +23,9 @@
     "paths": {
       "assets": ["assets"],
       "common": ["common"],
+      "pages": ["pages"],
+      "components": ["components"],
+      "redux-state": ["redux-state"],
       "app": ["app"]
     }
   },

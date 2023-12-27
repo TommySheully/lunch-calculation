@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './app/App'
 import reportWebVitals from './reportWebVitals'
-import { persistor, store } from 'app'
+import { persist, store } from 'app'
 import { Provider } from 'react-redux'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { PersistGate } from 'redux-persist/integration/react'
 
 const root = ReactDOM.createRoot(
@@ -13,13 +13,13 @@ const root = ReactDOM.createRoot(
 )
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <Provider store={store}>
-        <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
-        <App/>
-        </PersistGate>
-      </Provider>
-    </HashRouter>
+    <BrowserRouter>
+      <PersistGate loading={<div>Loading...</div>} persistor={persist}>
+        <Provider store={store}>
+          <App/>
+        </Provider>
+      </PersistGate>
+    </BrowserRouter>
   </React.StrictMode>
 )
 

@@ -1,6 +1,7 @@
 import React from 'react'
-import { DescriptionRecipe, recipes } from 'common'
+import { recipes } from 'common'
 import styled from 'styled-components'
+import { DescriptionRecipe } from 'components'
 
 export const ListRecipes = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react'
 import styled from 'styled-components'
-import { ingredients, measurementType, recipeType, SelectIngredients, theme } from 'common'
+import { ingredients, UnitType, recipeType, SelectIngredients, theme } from 'common'
 import Button from '@mui/material/Button'
 import { TextField } from '@mui/material'
 import { SubmitHandler, useController, useForm } from 'react-hook-form'
@@ -34,7 +34,7 @@ export const ModalAddIngredients = ({ addIngredientCallback }: PropsType) => {
     const { ingredient, value } = data
     const allIngredients = Object.values(ingredients).flat()
     const selectedIngredientData = allIngredients.find((i) => i.ingredient === ingredient)
-    const measurement = selectedIngredientData!.measurement === undefined ? 'кг' as measurementType : selectedIngredientData!.measurement as measurementType
+    const measurement = selectedIngredientData!.measurement === undefined ? 'кг' as UnitType : selectedIngredientData!.measurement as UnitType
     addIngredientCallback({ ingredient, measurement, value, id: v4() })
   }
 
@@ -82,7 +82,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '50%',
+  width: 'max(300px, 80%)',
   height: '80%',
   bgcolor: theme.background,
   borderRadius: '5px',

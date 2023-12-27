@@ -1,7 +1,6 @@
 import { IngredientsType, receiptsType } from 'common'
 import { v4 } from 'uuid'
 
-export const exceptions = ['итог', 'выход противней размером 40х60 (5х8 нарезка)', 'выход противней (7х9 нарезка)', 'тесто', 'соус', 'начинка', 'крем', 'масло для фритюра', 'кляр', 'вода']
 export const exceptionsIngredients = ['тесто', 'соус', 'начинка', 'крем', 'масло для фритюра', 'кляр']
 export const ingredients: IngredientsType = {
   fruits: [
@@ -196,7 +195,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.8, id: v4() },
       { ingredient: 'вода', measurement: 'л', value: 16.7, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 184, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 21.7, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 21.7, id: v4(), exclude: true }
     ],
     description: 'Закипятить воду. Выложить сливочное масло в кастрюлю и растопить его. Добавить рис и обжарить до золотистых крупинок. Затем добавить соль и закипевшую воду. Размешать и довести до кипения. Поставить огонь на минимум и варить под крышкой в течение 13 минут. Затем выключить огонь и оставить под крышкой на протяжении 20 минут. Проверьте грамматику.',
     id: v4()
@@ -218,7 +217,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'черный перец молотый', measurement: 'гр', value: 30, id: v4() },
       { ingredient: 'кориандр молотый', measurement: 'гр', value: 30, id: v4() },
       { ingredient: 'карри молотый', measurement: 'гр', value: 40, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 42.5, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 42.5, id: v4(), exclude: true }
     ],
     description: 'Овощи запечь отдельно или потушить. Для приготовления масалы: разогрейте масло, обжарьте в нем специи, затем добавьте томатную пасту и сахар, обжарьте до характерного бордового состояния. Смешайте овощи, сметану, масалу, а затем добавьте асафетиду. Посолите и размешайте.',
     id: v4()
@@ -239,7 +238,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'черный перец молотый', measurement: 'гр', value: 30, id: v4() },
       { ingredient: 'кориандр молотый', measurement: 'гр', value: 30, id: v4() },
       { ingredient: 'карри молотый', measurement: 'гр', value: 40, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 37.5, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 37.5, id: v4(), exclude: true }
     ],
     description: 'Овощи запечь отдельно или потушить. Для приготовления масалы: разогрейте масло, обжарьте в нем специи, затем добавьте томатную пасту и сахар, обжарьте до характерного бордового состояния. Смешайте овощи, сметану, масалу, а затем добавьте асафетиду. Посолите и размешайте.',
     id: v4()
@@ -252,7 +251,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'мята свежая', measurement: 'кг', value: 0.1, id: v4() },
       { ingredient: 'сахар', measurement: 'кг', value: 1.5, id: v4() },
       { ingredient: 'лимон', measurement: 'кг', value: 0.6, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 40, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 40, id: v4(), exclude: true }
     ],
     description: 'Закипятить воду, добавить мяту, сахар, лимонный сок. После кипения выключить газ и добавить шкурки лимона, закрыть крышкой оставить настаиваться.',
     id: v4()
@@ -265,7 +264,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'облипиха', measurement: 'кг', value: 1.3, id: v4() },
       { ingredient: 'сахар', measurement: 'кг', value: 1.8, id: v4() },
       { ingredient: 'лимон', measurement: 'кг', value: 1, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 40, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 40, id: v4(), exclude: true }
     ],
     description: 'Закипятить воду, добавить сахар, лимонный сок. Взблендерить облипиху с частью воды, добавить. После кипения выключить газ и добавить шкурки лимона, закрыть крышкой оставить настаиваться.',
     id: v4()
@@ -279,7 +278,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'сахар', measurement: 'кг', value: 1.5, id: v4() },
       { ingredient: 'лимон', measurement: 'кг', value: 0.5, id: v4() },
       { ingredient: 'каркадэ', measurement: 'гр', value: 100, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 40, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 40, id: v4(), exclude: true }
     ],
     description: 'Закипятить воду, добавить сахар, лимонный сок, каркадэ. Взблендерить клабнику с частью воды, добавить. После кипения выключить газ и добавить шкурки лимона, закрыть крышкой оставить настаиваться.',
     id: v4()
@@ -299,7 +298,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'гвоздика молотая', measurement: 'гр', value: 25, id: v4() },
       { ingredient: 'корица молотая', measurement: 'гр', value: 75, id: v4() },
       { ingredient: 'бадьян', measurement: 'гр', value: 40, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 40, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 40, id: v4(), exclude: true }
     ],
     description: 'Закипятить воду, добавить сахар, лимонный сок, каркадэ, специи, имбирь предварительно натёртый, сок виноградный. После кипения выключить газ и добавить шкурки лимона, и нарезанный апельсин. Закрыть крышкой оставить настаиваться, чем дольше настаивается, тем вкуснее. Процедить перед разливом.',
     id: v4()
@@ -318,7 +317,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'лимонная кислота', measurement: 'гр', value: 114.7, id: v4() },
       { ingredient: 'сода', measurement: 'гр', value: 114.7, id: v4() },
       { ingredient: 'ванилин', measurement: 'гр', value: 12.5, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4() }
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.54, id: v4(), exclude: true  }
     ],
     description: 'Яблоки нарезать на кусочки. Грецкий орех обжарить в конвектомате до характерного цвета и запаха, и мелко нарезать.  Смажьте противни маслом, а потом посыпте манкой, что бы они были покрыты тонким слоем манки, для того, что бы шарлотка не пристала после запекания к противню. Смешать муку, манку, масло, сахар, кефир, лимонную кислоту, соду, ванилин и вымесить тесто. Добавить туда яблоки и грецкий орех, вымешать. После замешивания теста лимонка и сода вступают в реакцию, которая поднимает тесто. Чтобы пирог поднялся, нужно после вымешивания тесто как можно быстрее поставить его печься.',
     id: v4()
@@ -333,8 +332,8 @@ export const recipes: receiptsType[] = [
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
       { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
       { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4() }
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
     ],
     description: 'Семечки обжариваем в конвектомате до характерного запаха и цвета. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин и начинаем постепенно добавлять по пачке сухое молоко и семечки, вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем по нужному размеру.',
     id: v4()
@@ -351,8 +350,8 @@ export const recipes: receiptsType[] = [
       { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
       { ingredient: 'лимон', measurement: 'гр', value: 1.5, id: v4() },
       { ingredient: 'куркума молотая', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4() }
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
     ],
     description: 'Цукаты замачиваем в воде. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин, лимонный сок, цедру от лимонов, куркуму и начинаем постепенно добавлять по пачке сухое молоко и цукаты (из которых нужно слить воду), вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем по нужному размеру.',
     id: v4()
@@ -367,8 +366,8 @@ export const recipes: receiptsType[] = [
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.84, id: v4() },
       { ingredient: 'сметана 26%', measurement: 'л', value: 1.12, id: v4() },
       { ingredient: 'ванилин', measurement: 'гр', value: 6.5, id: v4() },
-      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4() }
+      { ingredient: 'выход противней (7х9 нарезка)', measurement: 'шт', value: 1.587, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'кг', value: 4.47, id: v4(), exclude: true }
     ],
     description: 'Кунжут обжариваем в конвектомате до характерного запаха и цвета. 50% кунжута смолоть в мелкую фракцию. В толстодонной кастрюле растапливаем сливочное масло и добавляем сахар или сахарную пудру, сделанную из сахара. Варим, пока кристалы сахара полностью не растворятся в масле. Добавляем ванилин и начинаем постепенно добавлять по пачке сухое молоко и кунжут, вымешиваем, чтобы не было комков. Раскладываем в противень и убираем остывать в холодильник. Нарезаем как нужно.',
     id: v4()
@@ -377,14 +376,14 @@ export const recipes: receiptsType[] = [
     title: 'пицца',
     value: 100,
     ingredients: [
-      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'мука высший сорт', measurement: 'кг', value: 1.4, id: v4() },
       { ingredient: 'сода', measurement: 'гр', value: 8, id: v4() },
       { ingredient: 'кефир', measurement: 'л', value: 1, id: v4() },
       { ingredient: 'сахар', measurement: 'кг', value: 0.025, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 18, id: v4() },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 0.42, id: v4() },
-      { ingredient: 'соус', measurement: 'л', value: 0, id: v4() },
+      { ingredient: 'соус', measurement: 'л', value: 0, id: v4(), exclude: true },
       { ingredient: 'томатная паста', measurement: 'кг', value: 0.25, id: v4() },
       { ingredient: 'вода', measurement: 'л', value: 0.07, id: v4() },
       { ingredient: 'асафетида', measurement: 'гр', value: 3, id: v4() },
@@ -396,8 +395,8 @@ export const recipes: receiptsType[] = [
       { ingredient: 'перец', measurement: 'кг', value: 0.9, id: v4() },
       { ingredient: 'маслины', measurement: 'кг', value: 2.26, id: v4() },
       { ingredient: 'сыр моцарелла', measurement: 'кг', value: 1.5, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4() },
-      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4() }
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4(), exclude: true }
     ],
     description: 'Замешать тесто из ингредиентов для теста и оставить накрытым чем-либо, чтобы не заветривалось, отдыхать минут 15-30. Сыр натереть, помидоры, перец, маслины и другую начинку нарезать. Для соуса в кастрюле нагреть масло, добавить специи и обжарить их. Добавить томатную пасту и обжарить её, добавить соль, сахар, воду. Разделить тесто на нужное количество кусков, согласно количеству противней, раскатать тесто и выложить на противень, полить частью соуса, выложить сыр, наложить начинку. Если предусмотрен дополнительный соус сверху (майонез, сметана, песто и т.д.), выложить сеточку. Запекать в духовке при 180-200 градусах. Есть альтернативный вариант, при котором сначала запекается тесто, а потом все накладывается и немного подпекается.',
     id: v4()
@@ -421,13 +420,13 @@ export const recipes: receiptsType[] = [
       { ingredient: 'куркума молотая', measurement: 'гр', value: 15, id: v4() },
       { ingredient: 'кардамон молотый', measurement: 'гр', value: 63, id: v4() },
       { ingredient: 'корица молотая', measurement: 'гр', value: 15, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 20, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 20, id: v4(), exclude: true }
     ],
     description: 'Томаты среднего размера нарезаем дольками (как в апельсине). В идеале предварительно закинуть в кипяток на минуту и снять шкурки. Панир режем бруском размером с две фаланги указательного пальца. Перцы прямоугольниками примерно, как панир. Подготавливаем специи. Греем кастрюлю, кладем масло и имбирь, жарим до аромата, добавляем все сухое (специи, соль, сахар), прогреваем до аромата, добавляем томатную пасту и жарим пару минут, мешая, чтобы она потемнела и масло стало красным и отделилось от пасты, добавляем томаты и перцы и тушим вместе, аккуратно помешивая изредка, до полу готовности. Добавляем смолотый кешью, сливки и сметану. Аккуратно размешиваем и доводим до стабильного кипения, загружаем нарезанный панир, аккуратно размешиваем, снова доводим до кипения, выключаем, даем настояться не менее получаса.',
     id: v4()
   },
   {
-    title: '[халава с бананами]',
+    title: 'халава с бананами',
     value: 100,
     ingredients: [
       { ingredient: 'манная крупа', measurement: 'кг', value: 3.6, id: v4() },
@@ -439,7 +438,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'вода', measurement: 'л', value: 10, id: v4() },
       { ingredient: 'банан', measurement: 'кг', value: 5.9, id: v4() },
       { ingredient: 'ванилин', measurement: 'гр', value: 5, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 25, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 25, id: v4(), exclude: true }
     ],
     description: 'Сделать сироп: сахар положить в кастрюлю и сделать карамель, отдельно закипятить воду. добавить горячую воду когда сахар превратится в карамель и вымешать пока карамель не превратиться в сироп. функдук обжарить. изюм замочить. бананы нарезать. В отдельной кастрюле растопить масло, и обжарить в нем манку до состояния воздушности, затем добавить туда соль, ванилин, изюм (без воды), карамельный сироп и начать вымешивать, пока не начнет загустевать, тогда добавить бананы и вымешивать держа на малом огне до состояния средней густоты, затем выключить огонь и поставить настаиваться. Перед подачей добавить орехи и размешать.',
     id: v4()
@@ -472,7 +471,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'банан', measurement: 'кг', value: 5, id: v4() },
       { ingredient: 'клубника', measurement: 'кг', value: 2, id: v4() },
       { ingredient: 'ванилин', measurement: 'гр', value: 10, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 22, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 22, id: v4(), exclude: true }
     ],
     description: 'Смешать ряженку, сахар, воду, ванилин и мешать до растворения сахара. Добавить нарезанные бананы и измельченную в блендере клубнику.',
     id: v4()
@@ -506,7 +505,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'асафетида', measurement: 'гр', value: 50, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 100, id: v4() },
       { ingredient: 'черная соль', measurement: 'гр', value: 100, id: v4() },
-      { ingredient: 'итог', measurement: 'л', value: 22, id: v4() }
+      { ingredient: 'итог', measurement: 'л', value: 22, id: v4(), exclude: true }
     ],
     description: 'Шпинат размораживаем в кастрюле с горячей водой. Картошку и адыгейский сыр режем кубиками 2х2 см и запекаем в конвектомате до золотистой корочки. В кастрюле расплавляем масло и обжариваем специи. Шпинат процеживаем через сито, чтобы избавиться от лишней воды, и добавляем к обжаренным специям. Затем добавляем остальные ингредиенты и перемешиваем. Оставляем настояться.',
     id: v4()
@@ -516,9 +515,9 @@ export const recipes: receiptsType[] = [
     value: 100,
     ingredients: [
       { ingredient: 'цветная капуста', measurement: 'кг', value: 12, id: v4() },
-      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4() },
-      { ingredient: 'масло подсолнечное', measurement: 'кг', value: 3, id: v4() },
-      { ingredient: 'кляр', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true },
+      { ingredient: 'масло подсолнечное', measurement: 'л', value: 3, id: v4() },
+      { ingredient: 'кляр', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'нутовая мука', measurement: 'кг', value: 2.5, id: v4() },
       { ingredient: 'вода', measurement: 'л', value: 5, id: v4() },
       { ingredient: 'кунжут', measurement: 'кг', value: 0.5, id: v4() },
@@ -546,7 +545,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'клубника', measurement: 'кг', value: 3, id: v4() },
       { ingredient: 'кардамон молотый', measurement: 'гр', value: 20, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 32, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 15, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 15, id: v4(), exclude: true }
     ],
     description: 'Ряженку ложим в большую емкость (масса увеличится в итоге в 2-3 раза). Смешиваем все сухие ингредиенты (фундук предварительно обжариваем и измельчаем, клубнику нарезаем) и постепенно добавляем их в ряженку. Тщательно перемешиваем и оставляем в холодильнике на ночь. Перед раскладыванием снова тщательно перемешиваем.',
     id: v4()
@@ -555,7 +554,7 @@ export const recipes: receiptsType[] = [
     title: 'кофты из морковки (2 шт на человека + 10% запаса)',
     value: 100,
     ingredients: [
-      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'морковка', measurement: 'кг', value: 6.6, id: v4() },
       { ingredient: 'картошка', measurement: 'кг', value: 3.2, id: v4() },
       { ingredient: 'грецкий орех', measurement: 'кг', value: 0.3, id: v4() },
@@ -576,9 +575,9 @@ export const recipes: receiptsType[] = [
       { ingredient: 'лавровый лист молотый', measurement: 'гр', value: 15, id: v4() },
       { ingredient: 'сахар', measurement: 'кг', value: 1.3, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 158, id: v4() },
-      { ingredient: 'масло для фритюра', measurement: 'л', value: 2.8, id: v4() },
+      { ingredient: 'масло для фритюра', measurement: 'л', value: 2.8, id: v4(), exclude: true },
       { ingredient: 'масло подсолнечное', measurement: 'кг', value: 2.8, id: v4() },
-      { ingredient: 'итог', measurement: 'шт', value: 220, id: v4() }
+      { ingredient: 'итог', measurement: 'шт', value: 220, id: v4(), exclude: true }
     ],
     description: 'Овощи натереть на русскую терку. Смешать с мукой, солью и специями. Для соуса в кастрюле нагреть масло, добавить специи и обжарить их. Добавить томатную пасту и обжарить её, добавить остальные ингредиенты (крахмал предварительно растворить в небольшом количестве горячей воды). Из теста формируем шарик, в центр шарика ложим грецкий орех, и жарим их во фритюре.',
     id: v4()
@@ -595,7 +594,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'лавровый лист молотый', measurement: 'гр', value: 10, id: v4() },
       { ingredient: 'черный перец молотый', measurement: 'гр', value: 20, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 135, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4(), exclude: true }
     ],
     description: 'Картошку режем на дольки, смешиваем с маслом, специями, солью и запекаем в конвектомате до золотистой корочки. Перекладываем в емкость и смешиваем с нарезанным свежим укропом.',
     id: v4()
@@ -619,7 +618,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'майоран', measurement: 'гр', value: 15, id: v4() },
       { ingredient: 'черный перец молотый', measurement: 'гр', value: 20, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 80, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4(), exclude: true }
     ],
     description: 'В кастрюле нагреть масло, добавить специи и обжарить их. Добавить томатную пасту и обжарить её, добавить томаты нарезанные мелким кубиком и потушить минут 5, добавить остальное (крахмал предварительно растворить в небольшом количестве горячей воды).',
     id: v4()
@@ -643,7 +642,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'гвоздика молотая', measurement: 'гр', value: 10, id: v4() },
       { ingredient: 'лавровый лист молотый', measurement: 'гр', value: 10, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 75, id: v4() },
-      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4() }
+      { ingredient: 'итог', measurement: 'кг', value: 20, id: v4(), exclude: true }
     ],
     description: 'Имбирь, лимон, измельчать блендером, добавив 1 литр воды. Потом все это тушим с маслом на хорошем огне, помешивая. Доводим до кипения. Через 5 минут кипения добавляем вишню. Довести до кипения и поварить 10 минут. Добавляем оставшуюся воду взбитую блендером с крахмалом, солью и сахаром. Довести до кипения. Выключить вынести на холод, чтобы остыло до градусов 10-15. Часть вишни так же можно перебить блендером.',
     id: v4()
@@ -659,7 +658,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'фундук', measurement: 'кг', value: 0.9, id: v4() },
       { ingredient: 'арахис', measurement: 'кг', value: 1.5, id: v4() },
       { ingredient: 'семечки подсолнечника', measurement: 'кг', value: 1.5, id: v4() },
-      { ingredient: 'соль', measurement: 'гр', value: 25, id: v4() }
+      { ingredient: 'соль', measurement: 'гр', value: 25, id: v4(), exclude: true }
     ],
     description: 'Кунжут, арахис, семечки подсолнуха, фундук предварительно обжарить или запечь в конвектомате при 160 градусах до характерного запаха и цвета. Учитываем что для каждого ореха свое время приготовления. Топим сахар в кастрюле в карамель, добавляем соль, сметану и вымешиваем, затем все орехи (фундук очищаем от шелухи) и выпариваем лишнюю влагу. Перекладываем в противни и когда немного остынут нарезаем, потому что потом может не нарезаться.',
     id: v4()
@@ -668,13 +667,13 @@ export const recipes: receiptsType[] = [
     title: 'самосы',
     value: 100,
     ingredients: [
-      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'мука высший сорт', measurement: 'кг', value: 2.3, id: v4() },
       { ingredient: 'мука грубого помола', measurement: 'кг', value: 1.1, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 88, id: v4() },
       { ingredient: 'кефир', measurement: 'л', value: 2, id: v4() },
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.6, id: v4() },
-      { ingredient: 'начинка', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'начинка', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'цветная капуста', measurement: 'кг', value: 6.7, id: v4() },
       { ingredient: 'томаты', measurement: 'кг', value: 2, id: v4() },
       { ingredient: 'шпинат замороженный', measurement: 'кг', value: 1.3, id: v4() },
@@ -690,7 +689,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'кориандр молотый', measurement: 'гр', value: 15, id: v4() },
       { ingredient: 'асафетида', measurement: 'гр', value: 30, id: v4() },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 0.3, id: v4() },
-      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4() },
+      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true  },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 3, id: v4() }
     ],
     description: 'Для теста все смешиваем, вымешиваем и убираем настояться. Для начинки: цветную капусту на мелкие соцветия и запекаем, адыгейский сыр нарезаем 2х2 см и запекаем, шпинат размораживаем и через сито убираем лишнюю влагу, томаты нарезаем кубиком 2х2 см. делаем масалу: масло обжариваем со специями, затем обжариваем томатную пасту, добавляем сахар и сметану. Смешиваем все ингредиенты начинки. Формируем самосы и запекаем в духовке или жарим во фритюре.',
@@ -700,7 +699,7 @@ export const recipes: receiptsType[] = [
     title: 'муравейник',
     value: 100,
     ingredients: [
-      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'мука высший сорт', measurement: 'кг', value: 3.3, id: v4() },
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 1.3, id: v4() },
       { ingredient: 'кефир', measurement: 'л', value: 0.8, id: v4() },
@@ -710,8 +709,8 @@ export const recipes: receiptsType[] = [
       { ingredient: 'сгущенка вареная, банка', measurement: 'банка', value: 11.7, id: v4() },
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.6, id: v4() },
       { ingredient: 'арахис', measurement: 'кг', value: 0.8, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4() },
-      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4() }
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4(), exclude: true  },
+      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4(), exclude: true }
     ],
     description: 'Тесто: все мешаем (масло не замороженное должно быть). Тесто тонко раскатываем на противне и запекаем при 180 градусах до готовности, затем или ломаем до необходимой фракции, или блендерим в пыль. Крем: мягкое сливочное масло и варёную сгущенку смешиваем и миксером сзбиваем до получения состояния крема. Арахис обжариваем в конвектовате 160 градусах до золотистого цвета и характерного аромата, затем измельчаем. Все смешаваем всете: тесто, крем и арахис. Раскладываем на противня и в холодильник, оставляем на ночь или 7-8 часов настояться.',
     id: v4()
@@ -720,7 +719,7 @@ export const recipes: receiptsType[] = [
     title: 'алу патры',
     value: 100,
     ingredients: [
-      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4() },
+      { ingredient: 'тесто', measurement: 'кг', value: 0, id: v4(), exclude: true },
       { ingredient: 'мука высший сорт', measurement: 'кг', value: 4.3, id: v4() },
       { ingredient: 'вода', measurement: 'л', value: 2.8, id: v4() },
       { ingredient: 'соль', measurement: 'гр', value: 84, id: v4() },
@@ -732,10 +731,10 @@ export const recipes: receiptsType[] = [
       { ingredient: 'крахмал картофельный', measurement: 'кг', value: 0.175, id: v4() },
       { ingredient: 'карри молотый', measurement: 'гр', value: 35, id: v4() },
       { ingredient: 'асафетида', measurement: 'гр', value: 35, id: v4() },
-      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4() },
+      { ingredient: 'масло для фритюра', measurement: 'л', value: 3, id: v4(), exclude: true  },
       { ingredient: 'масло подсолнечное', measurement: 'л', value: 3, id: v4() },
-      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4() },
-      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4() }
+      { ingredient: 'выход противней размером 40х60 (5х8 нарезка)', measurement: 'шт', value: 2.5, id: v4(), exclude: true },
+      { ingredient: 'итог', measurement: 'шт', value: 100, id: v4(), exclude: true }
     ],
     description: 'Отварите картошку, разомните ее в пюре и остудите. Смешайте пюре с специями, крахмалом и кунжутом и кокосовой стружкой, которые предварительно обжарить. Затем замешайте тесто, сначала смешав сухие компоненты, затем добавив воду, и оставьте настояться в течение 15 минут. Раскатайте тесто тонким слоем толщиной около 2 мм. На раскатанное тесто выложите картофельное пюре и разгладьте его равномерным слоем, оставив место без картошки на одном длинном краю для склеивания. Закрутите в рулет, начиная с края, где находится картошка. После приготовления рулета нарежьте его на равные кусочки толщиной около 1-1,5 см. Обжарьте полученные кусочки на сковороде с маслом или во фритюре.',
     id: v4()
@@ -826,7 +825,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'сахар', measurement: 'кг', value: 0.096, id: v4() },
       { ingredient: 'сок лимонный', measurement: 'л', value: 0.06, id: v4() },
       { ingredient: 'горох в банке', measurement: 'шт', value: 4.75, id: v4() },
-      { ingredient: 'итог', measurement: 'шт', value: 17.8, id: v4() }
+      { ingredient: 'итог', measurement: 'шт', value: 17.8, id: v4(), exclude: true }
     ],
     description: 'Морковь почистить и отварить, нарезать размером с горох. Картофель сначала почистить и нарезать, а потом отварить с лимонной кислотой или соком лимона в большом количестве воды. Засыпать в кипяток картофель, когда будет готов слить кипяток и залить холодной водой, чтобы не переварился. Адыгейский сыр и огурцы нарезать размером с горох. Джил смолоть в порошок в блендере насухо. Огурцы нарезать размером с горох. Укроп и петрушку нарезать. Все замешать и в холодильник.',
     id: v4()

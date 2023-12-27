@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import Modal from '@mui/material/Modal'
-import { ListRecipes, theme } from 'common'
+import { Box, Button, Modal } from '@mui/material'
+import { theme } from 'common'
+import { ListRecipes } from 'components'
 
-export const BasicModal = () => {
+export const AddRecipeModal = () => {
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
@@ -20,8 +18,6 @@ export const BasicModal = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-          </Typography>
           <ListRecipes/>
         </Box>
       </Modal>
@@ -34,7 +30,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '50%',
+  width: 'max(300px, 80%)',
   height: '80%',
   bgcolor: theme.background,
   borderRadius: '5px',

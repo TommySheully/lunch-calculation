@@ -1,14 +1,15 @@
 import React from 'react'
-import { AppBarComponent, MenuComponent, PurchaseList } from 'common'
 import { Route, Routes } from 'react-router-dom'
+import { Header } from 'components'
+import { Menu, PurchaseList } from 'pages'
 
 function App() {
   return (
     <div>
-      <AppBarComponent/>
+      <Header/>
       <Routes>
-        <Route path="/" element={<MenuComponent/>}/>
-        <Route path="/Menu" element={<MenuComponent/>}/>
+        <Route path="/" element={<Menu/>}/>
+        <Route path="/Menu" element={<Menu/>}/>
         <Route path="/Purchase" element={<PurchaseList/>}/>
       </Routes>
     </div>

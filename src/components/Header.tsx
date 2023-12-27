@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { theme } from 'common'
 
 
-export const AppBarComponent = () => {
+export const Header = () => {
   return (
     <AppBar position="static" color="inherit">
       <Container maxWidth="xl">

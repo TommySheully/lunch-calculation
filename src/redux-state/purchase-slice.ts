@@ -16,13 +16,11 @@ const slice = createSlice({
     addAdditionalPurchaseAC(state, action: PayloadAction<{ additionalPurchase: recipeType }>) {
       state.additionalPurchase.push(action.payload.additionalPurchase)
     },
-    updateAdditionalPurchaseAC(state, action: PayloadAction<{ newValue: number, id: string }>) {
-      const index = state.additionalPurchase.findIndex(el => el.id === action.payload.id)
-      state.additionalPurchase[index].value = action.payload.newValue
+    updateAdditionalPurchaseAC(state, action: PayloadAction<{ value: number, id: string }>) {
+      state.additionalPurchase = state.additionalPurchase.map((el) => (el.id === action.payload.id ? {...el, value: action.payload.value} : el))
     },
     removeAdditionalPurchaseAC(state, action: PayloadAction<{ id: string }>) {
-      const index = state.additionalPurchase.findIndex(el => el.id === action.payload.id)
-      state.additionalPurchase.splice(index, 1)
+      state.additionalPurchase = state.additionalPurchase.filter((el) => el.id !== action.payload.id)
     }
   }
 })
