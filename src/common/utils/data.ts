@@ -933,8 +933,8 @@ export const recipes: receiptsType[] = [
       { ingredient: 'финики', measurement: 'кг', value: 2.6, id: v4() },
       { ingredient: 'сливочное масло 82%', measurement: 'кг', value: 0.285, id: v4() },
       { ingredient: 'сухое молоко', measurement: 'кг', value: 0.43, id: v4() },
-      { ingredient: 'сгущенка, банка', measurement: 'л', value: 3.5, id: v4() },
-      { ingredient: 'кунжут', measurement: 'кг', value: 175, id: v4() },
+      { ingredient: 'сгущенка, банка', measurement: 'банка', value: 3.5, id: v4() },
+      { ingredient: 'кунжут', measurement: 'кг', value: 0.175, id: v4() },
       { ingredient: 'ванилин', measurement: 'гр', value: 3, id: v4() },
       { ingredient: 'лимон', measurement: 'шт', value: 4, id: v4() },
       { ingredient: 'итог', measurement: 'кг', value: 4, id: v4(), exclude: true }
