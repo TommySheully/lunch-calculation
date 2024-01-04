@@ -5,9 +5,8 @@ import Button from '@mui/material/Button'
 import { TextField } from '@mui/material'
 import { SubmitHandler, useController, useForm } from 'react-hook-form'
 import { v4 } from 'uuid'
-import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
-import { Paper } from '@mui/material'
+import { Paper, Box } from '@mui/material'
 
 type PropsType = {
   addIngredientCallback: (ingredient: recipeType) => void
@@ -18,7 +17,7 @@ export const ModalAddIngredients = ({ addIngredientCallback }: PropsType) => {
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
   const { control, handleSubmit, formState: { errors } } = useForm<recipeType>({
-    defaultValues: { measurement: 'кг', value: 0 }
+    defaultValues: { measurement: 'кг', value: 0, exclude: false }
   })
 
   const { field: { onChange: setValue, value, onBlur } } = useController({ control, name: 'value', rules: { required: true } })
@@ -35,7 +34,7 @@ export const ModalAddIngredients = ({ addIngredientCallback }: PropsType) => {
     const allIngredients = Object.values(ingredients).flat()
     const selectedIngredientData = allIngredients.find((i) => i.ingredient === ingredient)
     const measurement = selectedIngredientData!.measurement === undefined ? 'кг' as UnitType : selectedIngredientData!.measurement as UnitType
-    addIngredientCallback({ ingredient, measurement, value: Number(value), id: v4() })
+    addIngredientCallback({ ingredient, measurement, value: Number(value), id: v4(), exclude: false })
   }
 
   return (

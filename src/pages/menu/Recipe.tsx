@@ -4,7 +4,7 @@ import { EditableSpan, ModalAddIngredients, receiptsType, recipeType } from 'com
 import styled from 'styled-components'
 import { useAppDispatch } from 'app'
 import { DeleteIcon } from 'assets'
-import { addIngredientAC, removeIngredientAC, removeRecipeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC } from 'redux-state'
+import { addIngredientAC, removeIngredientAC, removeRecipeAC, updateExcludeAC, updateIngredientsRecipeTC, updatePersonsForRecipeTC } from 'redux-state'
 import { Ingredient } from 'pages'
 
 type PropsType = { recipe: receiptsType }
@@ -16,6 +16,7 @@ export const Recipe = ({ recipe }: PropsType) => {
   const handleRemoveRecipe = () => dispatch(removeRecipeAC({ id: recipe.id }))
   const handleAddIngredient = (ingredient: recipeType) => dispatch(addIngredientAC({ id: recipe.id, ingredient }))
   const handleRemoveIngredient = (id: string) => dispatch(removeIngredientAC({ recipeId: recipe.id, ingredientId: id }))
+  const handleUpdateExclude  = (value: boolean, id: string) => dispatch(updateExcludeAC({ value,recipeId: recipe.id, ingredientId: id }))
   return (
     <Paper sx={style}>
       <HeaderComponent>
@@ -29,7 +30,8 @@ export const Recipe = ({ recipe }: PropsType) => {
       </HeaderComponent>
       <IngredientsContainer>
         {recipe.ingredients.map((el) => <Ingredient key={el.id}
-                                                    state={{ ingredient: el.ingredient, value: el.value, measurement: el.measurement, id: el.id }}
+                                                    state={{ ingredient: el.ingredient, value: el.value, measurement: el.measurement, id: el.id, exclude: el.exclude }}
+                                                    updateExclude={handleUpdateExclude}
                                                     onUpdate={handleUpDateRecipe}
                                                     removeIngredient={handleRemoveIngredient}/>)}
         <h4 style={{ padding: '3px', margin: '2px' }}>

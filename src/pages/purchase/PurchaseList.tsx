@@ -34,13 +34,14 @@ export const PurchaseList = () => {
         <Header>Список дополнительных ингридиентов к закупке (автоматически
           добавляется к общему списку): </Header>
         {additionalPurchase.map(el => <Ingredient key={el.id} state={el}
+                                                  updateExclude={() => {}}
                                                   onUpdate={handleUpdateAdditionalPurchase}
                                                   removeIngredient={handleRemoveAdditionalPurchase}/>)}
       </Paper>
       <Paper sx={{ width: '60%', margin: '5px 0', padding: '15px' }}>
         <Header>Итоговый список на закупку (из рецептов и дополнительного списка):</Header>
         {purchase.map(el => <Purchase key={el.id} id={el.id} value={Number((el.value).toFixed(2))} ingredient={el.ingredient}
-                                      measurement={el.measurement}/>)}
+                                      measurement={el.measurement} exclude={el.exclude}/>)}
       </Paper>
     </Component>
   )

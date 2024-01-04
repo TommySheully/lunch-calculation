@@ -42,6 +42,11 @@ const slice = createSlice({
     updatePersonsAC(state, action: PayloadAction<{ newPersons: number }>) {
       state.persons = action.payload.newPersons
     },
+    updateExcludeAC(state, action: PayloadAction<{ value: boolean, recipeId: string, ingredientId: string }>) {
+      state.recipes = state.recipes.map((el) => el.id === action.payload.recipeId
+        ? { ...el, ingredients: el.ingredients.map(ing => ing.id === action.payload.ingredientId ? {...ing, exclude: action.payload.value  } : ing) }
+        : el)
+    },
     addRecipeAC(state, action: PayloadAction<{ recipe: receiptsType }>) {
       state.recipes.push(action.payload.recipe)
     },
@@ -59,7 +64,7 @@ const slice = createSlice({
       state.recipes = state.recipes.map((el) => el.id === action.payload.id ? { ...el, ingredients: [...el.ingredients, action.payload.ingredient] } : el)
 
     },
-    removeIngredientAC(state, action: PayloadAction<{ recipeId: string; ingredientId: string }>) {
+    removeIngredientAC(state, action: PayloadAction<{ recipeId: string, ingredientId: string }>) {
       state.recipes = state.recipes.map((el) => el.id === action.payload.recipeId
         ? { ...el, ingredients: el.ingredients.filter(ing => ing.id !== action.payload.ingredientId) }
         : el)
@@ -68,4 +73,4 @@ const slice = createSlice({
 })
 
 export const recipesReducer = slice.reducer
-export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC, removeIngredientAC, clearRecipeAC } = slice.actions
+export const { addRecipeAC, updateRecipeAC, removeRecipeAC, updatePersonsAC, addIngredientAC, removeIngredientAC, clearRecipeAC, updateExcludeAC } = slice.actions
