@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(thunkMiddleware)
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }).prepend(thunkMiddleware)
 })
 
 export const persist = persistStore(store)
