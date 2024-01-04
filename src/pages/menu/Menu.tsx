@@ -4,7 +4,7 @@ import { AddRecipeModal, ButtonUniversal, savePdf, theme } from 'common'
 import styled from 'styled-components'
 import { Paper } from '@mui/material'
 import { Persons, Recipe } from 'pages'
-import { updatePersonsTC, clearRecipeAC } from 'redux-state'
+import { clearRecipeAC, updatePersonsTC } from 'redux-state'
 
 export const Menu = () => {
   const { recipes, persons } = useAppSelector(recipesSelector)

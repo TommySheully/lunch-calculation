@@ -35,7 +35,7 @@ export const ModalAddIngredients = ({ addIngredientCallback }: PropsType) => {
     const allIngredients = Object.values(ingredients).flat()
     const selectedIngredientData = allIngredients.find((i) => i.ingredient === ingredient)
     const measurement = selectedIngredientData!.measurement === undefined ? 'кг' as UnitType : selectedIngredientData!.measurement as UnitType
-    addIngredientCallback({ ingredient, measurement, value, id: v4() })
+    addIngredientCallback({ ingredient, measurement, value: Number(value), id: v4() })
   }
 
   return (

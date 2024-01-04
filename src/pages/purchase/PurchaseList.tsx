@@ -17,6 +17,7 @@ export const PurchaseList = () => {
   const handleSavePdf = () => savePdf('pdf-purchase', 'purchase')
 
   useEffect(() => {
+
     const purchase = combiningItem(recipes.flatMap((x) => x.ingredients).concat(additionalPurchase))
     dispatch(setPurchaseAC({ purchase }))
   }, [dispatch, recipes, additionalPurchase])
