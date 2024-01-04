@@ -766,7 +766,7 @@ export const recipes: receiptsType[] = [
       { ingredient: 'огурцы маринованные', measurement: 'кг', value: 2.2, id: v4(), exclude: false },
       { ingredient: 'укроп свежий', measurement: 'кг', value: 0.15, id: v4(), exclude: false },
       { ingredient: 'петрушка свежая', measurement: 'кг', value: 0.15, id: v4(), exclude: false },
-      { ingredient: 'майонез постный', measurement: 'кг', value: 4, id: v4(), exclude: false },
+      { ingredient: 'сметана 26%', measurement: 'кг', value: 4, id: v4(), exclude: false },
       { ingredient: 'черная соль', measurement: 'гр', value: 60, id: v4(), exclude: false },
       { ingredient: 'асафетида', measurement: 'гр', value: 25, id: v4(), exclude: false },
       { ingredient: 'черный перец молотый', measurement: 'гр', value: 5, id: v4(), exclude: false },
@@ -785,7 +785,7 @@ export const recipes: receiptsType[] = [
     ingredients: [
       { ingredient: 'мука высший сорт', measurement: 'кг', value: 1.1, id: v4(), exclude: false },
       { ingredient: 'мука 1й сорт', measurement: 'кг', value: 1.1, id: v4(), exclude: false },
-      { ingredient: 'банан', measurement: 'кг', value: 3.4, id: v4(), exclude: false },
+      { ingredient: 'банан', measurement: 'кг', value: 5.4, id: v4(), exclude: false },
       { ingredient: 'масло подсолнечное', measurement: 'кг', value: 1.5, id: v4(), exclude: false },
       { ingredient: 'сахар', measurement: 'кг', value: 1.5, id: v4(), exclude: false },
       { ingredient: 'разрыхлитель', measurement: 'гр', value: 80, id: v4(), exclude: false },
