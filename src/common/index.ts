@@ -1,6 +1,7 @@
 export * from './utils/config/theme'
 export * from './utils/data'
 export * from './utils/type'
+export * from './utils/useDebounce'
 
 export * from './utils/calculations'
 export * from './utils/downloadPdf'
