@@ -25,7 +25,7 @@ export const PurchaseList = () => {
   return (
     <Component id="pdf-purchase">
       <Paper
-        sx={{ width: '60%', margin: '5px 0', padding: '0 15px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        sx={style}>
         <ModalAddIngredients addIngredientCallback={handleIngredientAdd}/>
           <ButtonUniversal onClick={handleClearPurchase}>очистить дополнительный список закупки</ButtonUniversal>
           <ButtonUniversal onClick={handleSavePdf}>скачать закупочный лист</ButtonUniversal>
@@ -59,6 +59,4 @@ const Header = styled.h4`
   padding: 0;
 `
 
-
-
-
+const style = { width: '60%', margin: '5px 0', padding: '0 15px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }

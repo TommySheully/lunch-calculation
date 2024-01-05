@@ -10,7 +10,7 @@ type PropsType = {
 
 export const Persons = ({changePersons, persons}: PropsType) => {
   return (
-    <Paper sx={{ width: '60%', margin: '5px 0', padding: '0 15px' }}>
+    <Paper sx={style}>
       <Container>
         <h2 style={{ margin: '8px 0' }}>Расчет на количество человек</h2>
         <EditableSpan value={persons.toString()} onChange={changePersons}/>
@@ -18,6 +18,8 @@ export const Persons = ({changePersons, persons}: PropsType) => {
     </Paper>
   )
 }
+
+const style = { width: '60%', margin: '5px 0', padding: '0 15px' }
 
 const Container = styled.div`
   display: flex;

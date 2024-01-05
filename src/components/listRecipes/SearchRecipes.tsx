@@ -5,10 +5,10 @@ import { useDebounce } from 'common'
 
 type SearchFilterComponentType = {
   searchValue: string
-  setSearchCallback: (value: string) => void
+  onSetInputValue: (value: string) => void
 }
 
-export const SearchFilterComponent: React.FC<SearchFilterComponentType> = ({ searchValue, setSearchCallback }) => {
+export const SearchFilterComponent: React.FC<SearchFilterComponentType> = ({ searchValue, onSetInputValue }) => {
 
   const [inputValue, setInputValue] = useState(searchValue)
 
@@ -19,8 +19,8 @@ export const SearchFilterComponent: React.FC<SearchFilterComponentType> = ({ sea
   }
 
   useEffect(() => {
-    setSearchCallback(debouncedValue)
-  }, [debouncedValue, setSearchCallback])
+    onSetInputValue(debouncedValue)
+  }, [debouncedValue, onSetInputValue])
 
   useEffect(() => {
     setInputValue(searchValue)

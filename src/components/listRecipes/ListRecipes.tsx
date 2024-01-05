@@ -10,13 +10,11 @@ export const ListRecipes = () => {
   const filtered = recipes.filter((recipe) =>
     recipe.title.toLowerCase().includes(inputValue.toLowerCase()))
 
-  const handleSetInput = (value: string) => {
-    setInputValue(value)
-  }
+  const handleSetInput = (value: string) => setInputValue(value)
 
   return (
     <Component>
-      <SearchFilterComponent searchValue={inputValue} setSearchCallback={handleSetInput}/>
+      <SearchFilterComponent searchValue={inputValue} onSetInputValue={handleSetInput}/>
       {filtered.map((el) => <DescriptionRecipe key={el.id} recipe={el}/>)}
     </Component>
   )

@@ -15,7 +15,7 @@ export const Menu = () => {
   return (
     <Component id="pdf-menu">
       <Paper
-        sx={{ width: '60%', margin: '5px 0', padding: '0 15px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        sx={style}>
         <AddRecipeModal/>
         <ButtonUniversal onClick={handleClearMenu}>очистить меню</ButtonUniversal>
         <ButtonUniversal onClick={handleSavePdf}>скачать меню</ButtonUniversal>
@@ -32,3 +32,5 @@ const Component = styled.div`
   flex-direction: column;
   background: ${theme.background};
 `
+
+const style = { width: '60%', margin: '5px 0', padding: '0 15px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }
